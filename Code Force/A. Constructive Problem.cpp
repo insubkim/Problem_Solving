@@ -12,17 +12,6 @@ vi arr;
 vi result;
 int tmp;
 
-int    set_least(int mex)
-{
-    int least = mex;
-
-    vi::iterator iter;
-    for (iter == arr.begin(); iter != arr.end(); iter++){
-        if (least )
-    }
-    return (1);
-}
-
 void    search()
 {
     int mex, next_mex;
