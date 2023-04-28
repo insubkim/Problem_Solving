@@ -1,4 +1,7 @@
-#include <bits/stdc++.h>
+//#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+
 
 #define REP(i,a,b) for (int i = a; i <= b; i++)
 
@@ -15,5 +18,12 @@ int main()
     //cout << arr.pop_back();
     //cout << arr.pop_back();
     //cout << arr.pop_back();
+    for (int i = 0; i < arr.size(); i++){
+		cout << arr[i] << endl;
+	}
+
+    for (auto x : arr){
+        cout << x << "\n";
+    }
     return (0);
 }
