@@ -18,9 +18,9 @@ int main()
     //cout << arr.pop_back();
     //cout << arr.pop_back();
     //cout << arr.pop_back();
-    for (int i = 0; i < arr.size(); i++){
-		cout << arr[i] << endl;
-	}
+    // for (int i = 0; i < arr.size(); i++){
+	// 	cout << arr[i] << endl;
+	// }
 
     for (auto x : arr){
         cout << x << "\n";
