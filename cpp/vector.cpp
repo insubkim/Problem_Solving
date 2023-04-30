@@ -18,17 +18,8 @@ int main()
     //cout << arr.pop_back();
     //cout << arr.pop_back();
     //cout << arr.pop_back();
-<<<<<<< HEAD
     REP(i, 0, 2){
         cout << arr[i] <<endl;
-=======
-    // for (int i = 0; i < arr.size(); i++){
-	// 	cout << arr[i] << endl;
-	// }
-
-    for (auto x : arr){
-        cout << x << "\n";
->>>>>>> 109aba566ba954fdac99f06c6b5adb28cedad482
     }
     return (0);
 }
