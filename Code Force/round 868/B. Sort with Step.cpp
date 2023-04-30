@@ -43,7 +43,6 @@ void    search(){
     }
 }
 
-
 int main(){
     cin >> t;
     //n k

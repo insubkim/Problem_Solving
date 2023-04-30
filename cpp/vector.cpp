@@ -11,9 +11,12 @@ int main()
 {
     arr.push_back(1);
     arr.push_back(2);
-    arr.push_back(3);
+    arr.push_back(2);
     //cout << arr.pop_back();
     //cout << arr.pop_back();
     //cout << arr.pop_back();
+    REP(i, 0, 2){
+        cout << arr[i] <<endl;
+    }
     return (0);
 }
