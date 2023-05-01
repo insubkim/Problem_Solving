@@ -23,7 +23,7 @@ int main(){
         cin >>tmp;
         v.PB(tmp);
     }
-    long double min = -1;
+    long double min = -2;
     long double t;
     long double avr;
     int sum;
@@ -31,14 +31,14 @@ int main(){
         sum = 0;
         REP (j, i, n-1){
             sum += v[j];
-            if (j == i+k-1){
+            if (min < -1 && j == i+k-1){
                 t = 0;
                 avr = (long double)sum / (j - i + 1);
                 REP (l, i, j){
                     t += pow(((long double)v[l] - avr), 2);
                 }
                 min =  t / (j - i + 1);
-            }else if (j > i+k-1){
+            }else if (j >= i+k-1){
                 t = 0;
                 avr = (long double)sum / (j - i + 1);
                 REP (l, i, j){
