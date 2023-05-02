@@ -10,19 +10,7 @@ typedef vector<int> vi;
 vi v;
 vi dp;
 
-void    get_dispersion(int i, int j){
-
-}
-
-int main(){
-    int n,k;
-
-    cin >> n >> k;
-    int tmp;
-    REP(i, 1, n){
-        cin >>tmp;
-        v.PB(tmp);
-    }
+void    solve(int n, int k){
     long double min = -2;
     long double t;
     long double avr;
@@ -50,6 +38,20 @@ int main(){
             }
         }
     }
-    cout << sqrt(min) << endl;
+    //cout.precision(6);
+    //cout << sqrtl(min) << endl;
+    printf("%Lf\n", sqrt(min));
+}
+
+int main(){
+    int n,k;
+
+    cin >> n >> k;
+    int tmp;
+    REP(i, 1, n){
+        cin >>tmp;
+        v.PB(tmp);
+    }
+    solve(n, k);
     return (0);
 }
