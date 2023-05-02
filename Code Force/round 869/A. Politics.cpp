@@ -1,4 +1,7 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
 #include <stdlib.h>
 
 #define REP(i, a, b) for (int i = a; i <= b; i++)
@@ -24,21 +27,18 @@ void    search(void){
         }
         arr[i][k] = 0;
     }
-    int num = n;
     REP(i, 0, k-1){
-        int tmp = 1;
         REP(j, 1, n-1){
-            if (arr[0][i] == arr[j][i])
-                tmp++;
+            if (arr[j][0] && arr[0][i] == arr[j][i])
+                ;
             else
-            {
-                REP(k, i, n-1){
-                    arr[j][k] = '0';
-                }
-            }
+                arr[j][0] = 0;
         }
-        if (tmp < num)
-            num = tmp;
+    }
+    int num = 0;
+    REP(i, 0, n-1){
+        if (arr[i][0])
+            num++;
     }
     v.push_back(num);
     REP(i, 0, n-1){
