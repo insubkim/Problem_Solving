@@ -1,5 +1,8 @@
-#include <bits/stdc++.h>
+//#include <bits/stdc++.h>
 #include <stdlib.h>
+#include <iostream>
+#include <vector>
+#include <set>
 
 #define REP(i, a, b) for (int i = a; i <= b; i++)
 
@@ -51,15 +54,14 @@ int get_next(int k){
 }
 */
 int get_next(int k){
-        
         for (int j=0; j <= k-1; j++){
             if (arr[j] ==arr[k]){
                 return(0);
             }
         }
-        int j = k-1;
+        int j = k-2;
         while (j >= 0){    
-            if (sum(j, k) % (k - j + 1) == 0)
+            if (sum(j, k-1) % (k - j + 1) == 0)
                 break ;
             j--;
         }
@@ -73,7 +75,6 @@ int get_next(int k){
 
 void    search(int k){
     if (k==n){
-        //출력
         for(auto x : arr){
             v.push_back(x);
         }
@@ -81,14 +82,11 @@ void    search(int k){
         done = 1;
     }
     else{
-        //get next and search
-        //if cant return
         while (1){
             if (get_next(k))
                 search(k+1);
             if (done)
-                return ;
-            
+                return ;    
             arr[k] = arr[k] + 1;
             if (arr[k] > n){
                 if (k == 0)
