@@ -40,7 +40,6 @@ int	main(){
 
 	cin >> t;
 	while (t--) search();
-	int	flag = 0;
 	for (auto x : v){
 		if (x == -2){
 			cout << endl;
