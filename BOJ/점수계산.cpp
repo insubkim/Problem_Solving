@@ -13,7 +13,7 @@ typedef vector<int> vi;
 vi v;
 
 int	main(){
-
+	
 
 
 }
