@@ -11,14 +11,15 @@ si s;
 int main(){
     s.insert(10);
     s.insert(20);
-    
+    s.insert(30);
+
     si::iterator iter;
-    iter = s.lower_bound(30);
+    iter = s.lower_bound(21);
     int a = *iter;
-    iter = s.upper_bound(1);
+    iter = s.upper_bound(21);
     int b = *iter;
 
-    cout <<"lower 30 =" << a << endl;
-    cout <<"upper 1=" << b << endl;
+    cout <<"lower_bound =" << a << endl;
+    cout <<"upper_bound =" << b << endl;
     return (0);
 }
