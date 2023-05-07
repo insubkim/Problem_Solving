@@ -16,7 +16,7 @@ int main(){
         s.insert(tmp);
     }
     tmp = *(s.begin());
-    si::iterator iter;
+    set<int>::iterator iter;
     for(iter = s.begin(); iter != s.end(); iter++){
         t = *iter;    
     }
