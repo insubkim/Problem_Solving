@@ -1,1 +1,8 @@
 git config user.email "내 이메일 주소"
+git config --list
+
+이메일 다르면 잔디밭 안만들어짐.
+
+로컬 컴퓨터 시간 안맞으면 제대로 잔디밭 안만들어짐.
+
+
