@@ -16,6 +16,7 @@ typedef vector<int> vi;
 mi	m;
 vi	v;
 vi	a;
+vi	b;
 
 void	solve(void){
 	int	n,tmp,prime_num = 0;
@@ -32,6 +33,7 @@ void	solve(void){
 			if (su % i == 0){
 				if (!m.count(i)){
 					prime_num++;
+					b.PB(i);
 				}
 				m.insert(i);
 				su = su / i;
@@ -40,9 +42,14 @@ void	solve(void){
 		}
 	}
 	//약수 갯수 구하기
-
-	if (m.size() - prime_num - 1 >= prime_num){
-		v.PB(m.size() /2);
+	int	size = 1;
+	int	s = 0;
+	for (int i = 0; i < b.size(); i++){
+		size *= m.count(b[i]) + 1;
+		s += m.count(b[i]);
+	}
+	if (size - prime_num - 1 >= prime_num){
+		v.PB(s / 2);
 	}else{
 		v.PB(0);
 	}
