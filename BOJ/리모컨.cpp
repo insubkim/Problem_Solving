@@ -18,6 +18,7 @@ int	get_over(void){
 	while (cur != N && cur <= 500000){
 		n1++;
 	}
+	if (cur)
 }
 
 int	set_closest_channel(int *cur){
