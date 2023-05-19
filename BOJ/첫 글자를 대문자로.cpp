@@ -1,21 +1,20 @@
-#include <bits/stdc++.h>
+//#include <bits/stdc++.h>
 #include <unistd.h>
 
 #define REP(i, a, b) for (int i = a; i <= b; i++)
 
-using namespace std;
+//using namespace std;
 
 int main(){
-    char c[31] = {0,};
-    int b;
+    char c;
     int n;
-    cin >> n;
+    scanf("%d", &n);
     while (n--){
-        b = read(0, &c, 30);
-        c[b] = 0;
+        scanf("%c", &(c[0]));
         if ('a' <= c[0] && c[0] <= 'z')
             c[0] -= 32;
-        cout << c;
+        scanf("%s\n", &(c[1]));
+        printf("%s\n", c);
     }
     return (0);
 }
