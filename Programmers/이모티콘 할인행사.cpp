@@ -37,7 +37,7 @@ vi    solve(vector<vector<int>> users, vector<int> emoticons){
     int m = 0;
     while (get_rate(rate, (int)emoticons.size() - 1)){
         REP(i, 0, (int)emoticons.size() - 1){
-            v.PB(emoticons[i] - emoticons[i] * (rate[i]) / 100.0));
+            v.PB(emoticons[i] - emoticons[i] * (rate[i] / 100.0));
             cout << rate[i] << endl;
         }
         cout << endl;
