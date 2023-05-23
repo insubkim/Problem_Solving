@@ -6,9 +6,15 @@ using namespace std;
 
 int main(){
 
-    int N,M;
+    int N,M,tmp;
+    int n_len = 1;
     cin >> N >> M;
-    if (N > M){
+    tmp = N;
+    while (tmp >= 10){
+        tmp = tmp / 10;
+        n_len++;
+    }
+    if (n_len > M){
         REP(i, 1, M){
             cout << N;
         }
