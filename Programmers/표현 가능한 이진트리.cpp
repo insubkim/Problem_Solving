@@ -10,7 +10,9 @@ vector<int> solution(vector<long long> n) {
     vector<int> a;
     REP(i, 0, (int)n.size() - 1){
         long long k = 0b1;
-        
+        while (k > n[i]){
+            //해당 이진 트리
+        }
     }
     return a;
 }
