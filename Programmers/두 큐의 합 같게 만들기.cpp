@@ -11,7 +11,6 @@ unsigned long long q_sum(vector<int> q){
     return (sum);
 }
 
-#include <iostream>
 int solution(vector<int> q1, vector<int> q2) {
     unsigned long long sum = q_sum(q1) + q_sum(q2);
     if (sum % 2)
