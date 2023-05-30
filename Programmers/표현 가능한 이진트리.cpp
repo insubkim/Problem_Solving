@@ -6,13 +6,26 @@
 
 using namespace std;
 
+int solve(long long n){
+    int t = 0b1;
+    if (t == n)
+        return 1;
+    t = t << 1;
+    while (t <= n){
+        //in range .. and  if bit operation pass
+        if (t <= n && n <= t << 1 | t | ob1 && (n & t == t)){
+            return 1;
+        }
+        
+        //make next perfect binary tree
+    }
+    return 0;
+}
+
 vector<int> solution(vector<long long> n) {
     vector<int> a;
     REP(i, 0, (int)n.size() - 1){
-        long long k = 0b1;
-        while (k > n[i]){
-            //해당 이진 트리
-        }
+        a[i] = solve(n[i]);
     }
     return a;
 }
