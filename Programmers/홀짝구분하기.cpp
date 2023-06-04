@@ -5,10 +5,11 @@ using namespace std;
 int main(void) {
     int n;
     cin >> n;
-    if (n % 2){
-        cout << "even\n";
+    cout << n;
+    if (n % 2 == 0){
+        cout << " is even\n";
     }else{
-        cout << "odd\n";
+        cout << " is odd\n";
     }
     return 0;
 }
