@@ -5,18 +5,13 @@ using namespace std;
 
 int solution(vector<int> v) {
     int a = 0;
-    int f = 1;
-    for(int i = 0; i < (int)v.size(); i++){
-        if (v[i] == 1 && f == 4){
-            a++;
-            //del 4 element from begin()
-            //check begin if begin is 1 then f = 2;
-            //else f = 1;
-        }else if (v[i] == f){
-            f++;
-        }else{
-            //if v[i] == 1 and f == 2 then f = 2
-            //else if v[i] == 1 
+    for (int t = 0; t < (int)v.size(); t++){
+        if (v[t] == 1 && t >= 3){
+            if (v[t - 1] == 3 && v[t - 2] == 2 && v[t - 3] == 1){
+                v.erase(v.begin() + t - 3, v.begin() + t + 1);
+                a++;
+                t = t - 4;
+            }
         }
     }
     return a;
@@ -24,7 +19,7 @@ int solution(vector<int> v) {
 
 #include <iostream>
 int main(){
-    vector <int> l = {1,1,2,3,1,2,3,1};
+    vector <int> l = {1,2,1,2,3,1,3,1};
     int k = solution(l);
     cout << k << endl;
     return 0;
