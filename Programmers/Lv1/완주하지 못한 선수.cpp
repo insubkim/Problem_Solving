@@ -1,17 +1,15 @@
 #include <string>
 #include <vector>
-#include <set>
+#include <algorithm>
 
 using namespace std;
 
 string solution(vector<string> p, vector<string> c) {
-    multiset<string>m;
-    for (auto x : c)
-        m.insert(x);
-    for (auto x : p){
-        if (m.find(x) == m.end())
-            return x;
-        m.erase(m.find(x));
+    sort(p.begin(), p.end());
+    sort(c.begin(), c.end());
+    for (int i = 0; 1; i++){
+        if (p[i] != c[i])
+            return p[i];
     }
     return "";
 }
