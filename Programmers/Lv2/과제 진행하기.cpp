@@ -28,49 +28,45 @@ void print(vector<vector<string>> p) {
     }
 }
 
-int get_end_time(vector<string> s){
-    int hour = stoi(s[2]) / 60;
-    int min = stoi(s[2]) % 60;
-    return ((s[1][0] - '0') * 10 + s[1][1] - '0' + hour) * 60 + (s[1][3] - '0') * 10 + s[1][4] - '0' + min;
+int to_min(string t){
+    return ((t[0] - '0') * 10 + t[1] - '0') * 60 + (t[3] - '0') * 10 + t[4] - '0';
 }
 
-
-
-vector<string> solution(vector<vector<string>> p) {
+vector<string> solution(vector<vector<string>> p){
     vector<string> a;
     vector<pair<string, int>> stack;
 
     sort(p.begin(), p.end(), cmp);
-    vector<string> cur;
-    stack.push_back(make_pair(p[0][0], get_end_time(p[0])));
+    stack.push_back(make_pair(p[0][0], stoi(p[0][2])));
+    int prev_time = to_min(p[0][1]);
     p.erase(p.begin());
-    int prev_t, cur_t;
+    vector<string> cur;
     while (p.size() > 0){
         cur = p[0];
         p.erase(p.begin());
-        cur_t = ((cur[1][0] - '0') * 10 + cur[1][1] - '0') * 60 + (cur[1][3] - '0')* 10 + cur[1][4] - '0';
         while (stack.size() > 0){
-            prev_t = stack.back().second;
-            if (prev_t <= cur_t){
+            int elapse_time = to_min(cur[1]) - prev_time;
+            if (elapse_time >= stack.back().second){
                 a.push_back(stack.back().first);
+                prev_time += stack.back().second;
                 stack.pop_back();
             }else{
-                stack.back().second = prev_t - cur_t;
+                stack.back().second = stack.back().second - elapse_time;
                 break ;
             }
         }
-        stack.push_back(make_pair(cur[0], get_end_time(cur)));
+        stack.push_back(make_pair(cur[0], stoi(cur[2])));
+        prev_time = to_min(cur[1]); 
     }
     while (stack.size() > 0){
         a.push_back(stack.back().first);
-        stack.pop_back();      
+        stack.pop_back();
     }
-    
     return a;
 }
 
 int main(){
-    vector<vector<string>> p {{"science", "12:40", "50"}, {"music", "12:20", "40"}, {"history", "14:00", "30"}, {"computer", "12:30", "100"}};
+    vector<vector<string>> p {{"music", "12:20", "40"}, {"computer", "12:30", "100"}, {"science", "12:40", "50"}, {"history", "14:00", "30"}};
     
     vector <string> k = solution(p);
     for (auto x : k){
