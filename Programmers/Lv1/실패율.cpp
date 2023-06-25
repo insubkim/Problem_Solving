@@ -5,13 +5,6 @@
 
 using namespace std;
 
-
-//살패율 
-//스테이지에 있는 사람 수 / 스테이지에 있는 사람 + 스테이지 꺤 사람
-//N+1은  n스테이지 깬 사람임.
-//스테이지에 도달한 사람 없으면 실패율은 제로
-//실패율이 같으면 스태이지  번호 작은 순으로 반환
-
 bool    cmp(int a, int b){
     if (a > b){
         return true;
@@ -37,7 +30,6 @@ bool    cmp2(tuple<int, int, int>a, tuple<int, int, int>b){
 }
 
 vector<int> solution(int N, vector<int> s) {
-    //내림 차순으로 s 정렬
     sort(s.begin(), s.end(), cmp);
     int reached = 0;
     vector<tuple<int, int, int>> nums(N);
