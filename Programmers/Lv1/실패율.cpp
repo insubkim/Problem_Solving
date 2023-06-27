@@ -5,7 +5,6 @@
 
 using namespace std;
 
-<<<<<<< HEAD
 bool	cmp(tuple<int, int, int>a, tuple<int, int, int>b){
 	long long aa = get<1>(a) * get<2>(b);
 	long long bb = get<1>(b) * get<2>(a);
@@ -73,7 +72,7 @@ int main(){
 	for(auto x : a){
 		std::cout << x << endl;
 	}
-=======
+}
 bool    cmp(int a, int b){
     if (a > b){
         return true;
@@ -132,5 +131,4 @@ vector<int> solution(int N, vector<int> s) {
         a.push_back(get<0>(x));
     }
     return a;
->>>>>>> d88cbc4c1ae922d94db89cfcd806558cf65b7224
 }
