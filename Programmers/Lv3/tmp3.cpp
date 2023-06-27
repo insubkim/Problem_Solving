@@ -24,14 +24,9 @@ int solution(vector<vector<int>> s) {
 	int first1 = s[0][0];
 	int first2 = s[0][1];
 	sort(s.begin(), s.end(), cmp1);
-	int	m = s[0][1];
-	for (auto &x : s){
-		if (x[0][1] < m){
-			if (x[0] == first1 && x[1] == first2)
-				return -1;
-			x[0][0] = -1;
-		}
-	}
+	//get min val in each section
+
+	//if next sections min val 
 
 
 	sort(s.begin(), s.end(), sum);
