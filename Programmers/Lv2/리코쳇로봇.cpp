@@ -32,61 +32,61 @@ int solution(vector<string> b) {
             return get<2>(loc);
         }
         bfs.pop();
+        visited[get<0>(loc)][get<1>(loc)] == 'R';        
+        // 위 아래 오른 왼 방문하고 방문 않했으면 큐에 넣기
         for (int i = 1; get<0>(loc) - i >= 0; i++){
-            if (visited[get<0>(loc) - i][get<1>(loc)] == 'D' && i > 2){
+            //'d' 이고 이전이 '.' 혹은  끝이 '.' 일때는 방문 가능.
+            if (get<0>(loc) - i == 0 && visited[get<0>(loc) - i][get<1>(loc)] == '.'){
                 bfs.push(make_tuple(get<0>(loc) - i, get<1>(loc), get<2>(loc) + 1));
-                break ;
-            }else if (visited[get<0>(loc) - i][get<1>(loc)] == 'D'){
                 break ;
             }
-            if (visited[get<0>(loc) - i][get<1>(loc)] != 'D' && get<0>(loc) - i == 0){
-                bfs.push(make_tuple(get<0>(loc) - i, get<1>(loc), get<2>(loc) + 1));
+            else if (visited[get<0>(loc) - i][get<1>(loc)] == 'D' && visited[get<0>(loc) - i + 1][get<1>(loc)] == '.'){
+                bfs.push(make_tuple(get<0>(loc) - i + 1, get<1>(loc), get<2>(loc) + 1));
                 break ;
             }
         }
         for (int i = 1; get<0>(loc) + i < hei; i++){
-            if (visited[get<0>(loc) + i][get<1>(loc)] == 'D' && i > 2){
+            if (get<0>(loc) + i == hei - 1 && visited[get<0>(loc) + i][get<1>(loc)] == '.'){
                 bfs.push(make_tuple(get<0>(loc) + i, get<1>(loc), get<2>(loc) + 1));
-                break ;
-            }else if (visited[get<0>(loc) + i][get<1>(loc)] == 'D'){
                 break ;
             }
-            if (visited[get<0>(loc) + i][get<1>(loc)] != 'D' && get<0>(loc) + i == hei - 1){
-                bfs.push(make_tuple(get<0>(loc) + i, get<1>(loc), get<2>(loc) + 1));
+            else if (visited[get<0>(loc) + i][get<1>(loc)] == 'D' && visited[get<0>(loc) + i - 1][get<1>(loc)] == '.'){
+                bfs.push(make_tuple(get<0>(loc) + i - 1, get<1>(loc), get<2>(loc) + 1));
                 break ;
             }
         }
         for (int i = 1; get<1>(loc) - i >= 0; i++){
-            if (visited[get<0>(loc)][get<1>(loc) - i] == 'D' && i > 2){
+            if (get<1>(loc) - i == 0 && visited[get<0>(loc)][get<1>(loc) - i] == '.'){
                 bfs.push(make_tuple(get<0>(loc), get<1>(loc) - i, get<2>(loc) + 1));
-                break ;
-            }else if (visited[get<0>(loc)][get<1>(loc) - i] == 'D'){
                 break ;
             }
-            if (visited[get<0>(loc)][get<1>(loc) - i] != 'D' && get<1>(loc) - i == 0){
-                bfs.push(make_tuple(get<0>(loc), get<1>(loc) - i, get<2>(loc) + 1));
+            else if (visited[get<0>(loc)][get<1>(loc) - i] == 'D' && visited[get<0>(loc)][get<1>(loc) - i + 1] == '.'){
+                bfs.push(make_tuple(get<0>(loc), get<1>(loc) - i + 1, get<2>(loc) + 1));
                 break ;
             }
         }
         for (int i = 1; get<1>(loc) + i < wid; i++){
-            if (visited[get<0>(loc)][get<1>(loc) + i] == 'D' && i > 2){
-                bfs.push(make_tuple(get<0>(loc), get<1>(loc) + i, get<2>(loc) + 1));
-                break ;
-            }else if (visited[get<0>(loc)][get<1>(loc) + i] == 'D'){
+            if (get<1>(loc) - i == wid - 1 && visited[get<0>(loc)][get<1>(loc) + i] == '.'){
+                bfs.push(make_tuple(get<0>(lonc), get<1>(loc) + i, get<2>(loc) + 1));
                 break ;
             }
-            if (visited[get<0>(loc)][get<1>(loc) + i] != 'D' && get<1>(loc) + i == wid - 1){
-                bfs.push(make_tuple(get<0>(loc), get<1>(loc) + i, get<2>(loc) + 1));
+            else if (visited[get<0>(loc)][get<1>(loc) + i] == 'D' && visited[get<0>(loc)][get<1>(loc) + i - 1] == '.'){
+                bfs.push(make_tuple(get<0>(loc), get<1>(loc) + i - 1, get<2>(loc) + 1));
                 break ;
             }
         }
-        visited[get<0>(loc)][get<1>(loc)] == 'R';        
     }
     return -1;
 }
 
+
 #include <iostream>
-
 int main(){
-
+    string a = "..R";
+    string b = "...";
+    string c = "G..";
+    vector<string> k = {a,b,c,};
+    int j = solution(k);
+    cout << j << endl;
 }
+
