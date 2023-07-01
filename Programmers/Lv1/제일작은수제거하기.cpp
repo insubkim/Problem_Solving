@@ -1,6 +1,6 @@
 #include <string>
 #include <vector>
-#inlclude <algorithm>
+#include <algorithm>
 
 using namespace std;
 

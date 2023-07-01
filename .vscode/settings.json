@@ -4,6 +4,10 @@
         "iostream": "cpp",
         "ostream": "cpp",
         "random": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "__hash_table": "cpp",
+        "__string": "cpp",
+        "__tree": "cpp",
+        "string": "cpp"
     }
 }
