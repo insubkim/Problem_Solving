@@ -8,6 +8,11 @@
         "__hash_table": "cpp",
         "__string": "cpp",
         "__tree": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "__bit_reference": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "string_view": "cpp",
+        "unordered_map": "cpp"
     }
 }
