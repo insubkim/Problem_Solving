@@ -1,28 +1,31 @@
 #include <string>
 #include <vector>
-#include <cmath>
 
 using namespace std;
 
 long long   next_dummy_tree(int height){
-    long long dummy_tree = 1;
-    //왼쪽 자식 노드 수 만큼 왼쪽 시프트
-    //1 층이면 자식 2^0 -1
-    //2 층이면 자식 2^1 -1
-    //3 층이면 자식 2^2 -1
-    dummy_tree = dummy_tree << (int)pow(2, height - 1) - 1;
+    long long dummy_tree = 0;
+    for (int i = 1; i <= height; i++){
+        dummy_tree = dummy_tree << 2;
+        dummy_tree |= 0b10;
+    }
+    for (int i = 1; i <= height - 1; i++){
+        dummy_tree = dummy_tree << 2;
+    }
     return dummy_tree;
 }
 
 long long   next_p_tree(int height){
-    long long p_tree = 1;
-    //2 층이면 자식 111
-    //3 층이면 자식 1111 11 1 11 1111
-    for (int i = 1; i <= 2 * (int)pow(2, height - 1) - 1; i++){
-        p_tree = p_tree << 1;
-        p_tree = p_tree & 0b1;
+    long long p_tree = 0;
+    for (int i = 1; i <= height; i++){
+        p_tree = p_tree << 2;
+        p_tree |= 0b11;
     }
-    return p_tree;
+    for (int i = 1; i <= height - 1; i++){
+        p_tree = p_tree << 2;
+        p_tree |= 0b11;
+    }
+    return (p_tree << 1) | 1;
 }
 
 int solve(long long n){
