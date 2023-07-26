@@ -1,0 +1,12 @@
+strict weak ordering
+
+Description
+A Strict Weak Ordering is a Binary Predicate that compares two objects, returning true if the first precedes the second. This predicate must satisfy the standard mathematical definition of a strict weak ordering. The precise requirements are stated below, but what they roughly mean is that a Strict Weak Ordering has to behave the way that "less than" behaves: if a is less than b then b is not less than a, if a is less than b and b is less than c then a is less than c, and so on.
+
+
+Irreflexivity	f(x, x) must be false.
+Antisymmetry	f(x, y) implies !f(y, x)
+Transitivity	f(x, y) and f(y, z) imply f(x, z).
+Transitivity of equivalence	Equivalence (as defined above) is transitive: if x is equivalent to y and y is equivalent to z, then x is equivalent to z. (This implies that equivalence does in fact satisfy the mathematical definition of an equivalence relation.
+
+-https://www.boost.org/sgi/stl/StrictWeakOrdering.html
