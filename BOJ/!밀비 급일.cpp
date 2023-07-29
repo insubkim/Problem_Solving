@@ -1,18 +1,22 @@
-#include <bits/stdc++.h>
-#include <unsitd.h>
+#include <iostream>
+#include <string>
+#include <algorithm>
 
 using namespace std;
 
 int main(){
-    char a[501] = {0,};
-    int b = read(0, a, 500);
-    a[b] = 0;
-    int i = 0;
-    while (1){
-        int j = i + 1;
-        string c;
-        while (a[j] && a[j] != '\n')
-            j++;
-        
+    string tmp;
+    string s;
+    while (1)
+    {
+        getline(cin, tmp);
+        if (tmp != "END")
+            reverse(tmp.begin(), tmp.end());
+        if (tmp == "END")
+            break ;
+        tmp += '\n';
+        s += tmp;
     }
+    cout << s;
+    return 0;
 }
