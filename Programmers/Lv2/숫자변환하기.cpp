@@ -1,37 +1,24 @@
 #include <string>
 #include <vector>
 #include <set>
+#include <algorithm>
 
 using namespace std;
 
-int solution(int x, int y, int n) {
-    int answer = 0;
-    set<int> arr;
-    set<int> tmp;
+int dp[1000001];
 
-    arr.insert(x);
-    while(arr.size() != 0){
-        tmp.clear();
-        for (auto x : arr){
-            if (x == y)
-                return answer;
-            if (x + n < y)
-                tmp.insert(x + n);
-            else if (x + n == y)
-                return answer + 1;
-            if (x * 2 < y)
-                tmp.insert(x * 2);
-            else if (x * 2 == y)
-                return answer + 1;
-            if (x * 3 < y)
-                tmp.insert(x * 3);
-            else if (x * 3 == y)
-                return answer + 1;
-        }
-        arr = tmp;
-        answer++;
+int solution(int x, int y, int n) {
+    int a = 0;
+    fill (dp, dp + 1000001, 10000000);
+    dp[x] = 0;
+    for (int i = x; i <= y; i++){
+        if (i + n <= y) dp[i + n] = min(dp[i] + 1, dp[i + n]);
+        if (i * 2 <= y) dp[i * 2] = min(dp[i] + 1, dp[i * 2]);
+        if (i * 3 <= y) dp[i * 3] = min(dp[i] + 1, dp[i * 3]);
     }
-    return -1;
+    a = dp[y];
+    if (a == 10000000) return -1;
+    return a;
 }
 #include <iostream>
 int main(){
