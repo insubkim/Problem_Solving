@@ -1,0 +1,1398 @@
+commit 934272b5ae622d8b9c56ee5b851ae0c59cc38fb0
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Fri Aug 11 00:06:20 2023 +0900
+
+    solved : programmers 숫자변환하기 (DP)
+
+commit c8ce3c117e011aea662345e75541740a2165d60b
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Thu Aug 10 23:57:40 2023 +0900
+
+    solved : 숫자 변환하기
+
+commit 0e536506c574642db1edcb71f6f38569667e0674
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sun Jul 30 18:32:52 2023 +0900
+
+    solved : programmers 무인도 여행
+
+commit 2af3b19f5f58a608fa54fb36d603caf1141e53b1
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sat Jul 29 23:14:04 2023 +0900
+
+    solved : BOJ 밀비급일
+
+commit 8e656a62fbc282ba1f516bb0f89742c079d49b6d
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sat Jul 29 23:05:38 2023 +0900
+
+    solved : BOJ 첫글자를 대문자로
+
+commit ac3baf8644714227e9531e7c1b23392f16e98743
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Thu Jul 27 23:44:02 2023 +0900
+
+    solved : codeforce A. Desorting
+
+commit 4876d84268ca3e895b1d45c5ec64305e94285006
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Wed Jul 26 23:41:40 2023 +0900
+
+    docs : strict weak ordering
+
+commit 64de50393901730be20bc869e0959a1f6cf7e4fd
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Wed Jul 26 23:36:16 2023 +0900
+
+    solved : programmers Lv2 호텔 대실
+
+commit 37ecac12e77c268c42e44ec82c19e11a697e9aa2
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Wed Jul 26 22:38:18 2023 +0900
+
+    solved : programmers Lv2 미로탈출
+
+commit a6ff1d7feb6021f5e44bc800ef5e5ee9746c1dde
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Jul 16 21:28:39 2023 +0900
+
+    solving : programmers 미로탈출타임 아웃남
+
+commit 957510fe4a9ffff63b97657fced50a366d65b7c5
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Jul 16 20:21:30 2023 +0900
+
+    solved : programmers 혼자서 하는 틱택토
+
+commit 00e3ed8f71c7e8019388ec61a763c7d088b09936
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sun Jul 9 23:01:09 2023 +0900
+
+    docs : added readme
+
+commit ddb4ee3a854f0492af0d92f466a63df8b9d6ea5d
+Author: insubkim <37211885+insubkim@users.noreply.github.com>
+Date:   Sun Jul 9 22:57:55 2023 +0900
+
+    Create README.md
+
+commit 7a20e98194c8d9d134c86d1dee682ae7c8db7186
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Thu Jul 6 00:15:19 2023 +0900
+
+    All solved : programmers LV1
+
+commit 8fbc7020ffd9e27a3f888e9879a8960d99b1a82d
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Thu Jul 6 00:14:26 2023 +0900
+
+    solved : programmers 최대공약수와최소공배수
+
+commit 80c8a09f985cc44f6525a7fc69aa2b6f69b6f4c3
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Wed Jul 5 23:54:27 2023 +0900
+
+    solved : programmers 폰켓몬
+
+commit 3b3ff2a08612e304d02c16a5283f4c73fee8c2eb
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Wed Jul 5 23:49:34 2023 +0900
+
+    solved : programmers 2016
+
+commit 36ce6cdcf078d386d03e392416f4aa49ac7c4fd5
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Wed Jul 5 22:56:59 2023 +0900
+
+    solved : programmers 가운데문자가져오기
+
+commit f8136ca9d64aa8ec521925c177c890496d8987c9
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Wed Jul 5 22:47:35 2023 +0900
+
+    solved : programmers 같은숫자는싫어
+
+commit d347bb1549cf1f78897a6eabf86e80eb19223719
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Tue Jul 4 23:50:53 2023 +0900
+
+    solved : programmers 나누어떮어지는수
+
+commit eab4af82f58923f8bab1938ac67abde87571c24b
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Tue Jul 4 23:48:15 2023 +0900
+
+    solved : programmers 문자열내맘대로 다루기
+
+commit 4c16e3792f1bdddf983f116d663f2ae7ec6b35a2
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Tue Jul 4 23:33:53 2023 +0900
+
+    solved : programmers 문자열의 기본
+
+commit d4947b887b7ec53cedb86ab7734f146ddbcc5189
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Tue Jul 4 23:29:50 2023 +0900
+
+    solved : programmers 약수의 합
+
+commit 81dc7cdac7c90a618f2e4928fb11fc900ff335da
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sun Jul 2 21:43:22 2023 +0900
+
+    solving : programmers 표현가능한 이진트리
+
+commit 6953a7a66f57df5b527d3e9bfb87dbd70c4d3d8e
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sat Jul 1 22:24:06 2023 +0900
+
+    solved : programmers 수박수박 수박
+
+commit b5b3d87da92bc1aa81951a69d9d7fb41b8664d55
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sat Jul 1 22:17:11 2023 +0900
+
+    서울에서 김서방 찾기
+
+commit c39c6d74e4fb8744f42db266c25ed312daab9ddb
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sat Jul 1 22:06:16 2023 +0900
+
+    solved : programmers 정수내림차순으로 정렬하기
+
+commit 9aed77fe4fbe874ba0c89e5a3a1bd80c575bf624
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sat Jul 1 15:13:20 2023 +0900
+
+    solved : programmers 정수제곱근 판별
+
+commit fae0ffee990e1d7a5bdce781b7dcad0fea9436bb
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sat Jul 1 11:44:31 2023 +0900
+
+    solved :programmers 제일 작은수
+
+commit 5da6230e4f99cdd8b7a972d547c9899c99fb4a56
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sat Jul 1 11:30:45 2023 +0900
+
+    solved ; programmers 짝수와 홀수
+
+commit f4842b52e8de44b2ba1667934ec28fc4bc34929e
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Fri Jun 30 22:58:38 2023 +0900
+
+    solving : 콜라츠의 추측 , other way'
+
+commit d9680bc5b6cc113dc9288d45b5195f6b9d9a18e9
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Fri Jun 30 22:50:30 2023 +0900
+
+    solved : programmers 콜라츠의 추측
+
+commit 0ecac703662444ebc65faf001fb1754e3a1a951d
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Fri Jun 30 22:36:11 2023 +0900
+
+    solving : programmers 표현가능한 이진트리
+
+commit bfbc1b5b1ee9468d5f96e2ee035ecd956c5207b5
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Thu Jun 29 16:33:45 2023 +0900
+
+    solved : programmers 평균 구하기
+
+commit a2380aed1a32570a1d3937b9d49a3e6b05251d24
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Thu Jun 29 16:30:19 2023 +0900
+
+    solved : programmers 리코쳇로봇
+
+commit f84243797364914ec3f4a6227a3544cd1d79ee2b
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Thu Jun 29 13:57:37 2023 +0900
+
+    fixing : programmers 리코쳇로봇
+
+commit 3c3c1244883c27b8779c971a8ce39e14c23da011
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Thu Jun 29 13:53:02 2023 +0900
+
+    solved : programmers 리코쳇로봇
+
+commit 81e0b27bd02e29ded2a3032e7dfea9175737a8af
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Wed Jun 28 23:08:04 2023 +0900
+
+    solved : programmers 자릿수 더하기
+
+commit 0177c63b008b82c78b227ac3af9bf488881ab2e4
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Wed Jun 28 23:05:43 2023 +0900
+
+    soleved : programmers 하샤드수
+
+commit 41fbacc8c05393bdcc5d1e3763af27b12d4c899e
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Wed Jun 28 22:58:52 2023 +0900
+
+    solved : programmers 문자열을정수로바꾸기
+
+commit ce8095341d9f79c89570bc20adccbe8534ecbb34
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Tue Jun 27 19:39:53 2023 +0900
+
+    solving : programmers 평행
+
+commit f805fbb21bf7b4c765788af8a0fdd61fd1dc050c
+Merge: 65bbd61 d88cbc4
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Tue Jun 27 18:30:06 2023 +0900
+
+    fix : git pull
+
+commit 65bbd619c82211bd1ae3021c69e58ba0e9e1789c
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Tue Jun 27 18:28:33 2023 +0900
+
+    solved : programmers 이상한 문자 만들기
+
+commit d88cbc4c1ae922d94db89cfcd806558cf65b7224
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Mon Jun 26 23:37:48 2023 +0900
+
+    solved : programmers 행렬 덧셈
+
+commit 2e3f900980e206915a2bdcd0e18bbbba16a0984a
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Mon Jun 26 23:19:05 2023 +0900
+
+    solving : programmers 리코쳇 로봇
+
+commit 788ee65a890537f308c4d37cfd07b26f0f5ba05c
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sun Jun 25 22:46:56 2023 +0900
+
+    solving : programmers 리코쳇 로봇
+
+commit a9e81af4bdc05913994aaf4b70f1444781c4d3a6
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sun Jun 25 22:06:36 2023 +0900
+
+    solved : programmers x 만큼 간격있는 x 저장하기
+
+commit ade522587689c124b72590b3b1f3bf52714b97f7
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sun Jun 25 22:00:38 2023 +0900
+
+    solved : programmers 직사격형 별찍기
+
+commit f40ee3b45479992e89bb102a234c48f60cfe06e4
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sun Jun 25 21:50:47 2023 +0900
+
+    solved : programmers 실패율
+
+commit 640195d30ee48e20088bc3836a581ea08b14aaff
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sat Jun 24 21:24:13 2023 +0900
+
+    solved : programmers 예산
+
+commit adc1b060eee0374080942c2f092b253da21b404f
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sat Jun 24 20:59:58 2023 +0900
+
+    solved : programmers 비밀지도
+
+commit 611e7011a1349d9fd3f83741346a7705daf6d939
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Thu Jun 22 18:34:29 2023 +0900
+
+    solving : programmers 실패율
+
+commit d967e565aba1c3184e6753a98c5b6d69332a0c65
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Thu Jun 22 17:54:11 2023 +0900
+
+    solved : programmer 두수뽑아서더하기
+
+commit db8c1b72115745d78587dafeb84f3ec0d2f02a60
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Thu Jun 22 17:46:55 2023 +0900
+
+    solved : programmers 3진법 뒤집기
+
+commit b9fcc80c9f91f83d20b6e8978fe162e6fd9e0e04
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Thu Jun 22 11:32:31 2023 +0900
+
+    solved : BOJ 좋은 친구
+
+commit a18a4300d7f53310bf70aa54e87e205e4349bc68
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Wed Jun 21 16:47:46 2023 +0900
+
+    solving : programmers 인사교과
+
+commit 494970af3346a0a2ff28b1e071a4d9b44ce07ef3
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed Jun 21 00:16:50 2023 +0900
+
+    git check
+
+commit 28065425f9e302973fb299165439f144b0d73f3c
+Author: root <j.j.kant1948@gmail.com>
+Date:   Tue Jun 20 20:03:21 2023 +0900
+
+    solved : programmers 광물 캐기
+
+commit 27eb37c2dbf33604936aa14469750c78791fa63c
+Author: root <j.j.kant1948@gmail.com>
+Date:   Tue Jun 20 19:11:19 2023 +0900
+
+    solved : programmers 연속 펄스 부분 수열의 합
+
+commit 51818ec4279dec63a0830ba03d2efcb820ca0999
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Tue Jun 20 01:20:48 2023 +0900
+
+    solved : programmers 과제 진행하기
+
+commit 177bb9ddcc1ac2640da290d9aefcc87d6d862127
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Tue Jun 20 00:56:09 2023 +0900
+
+    solving : programmers : 과제 진행하기
+
+commit 283e0df6264cc887b7f067c077228ce3b3d717cd
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sun Jun 18 23:01:43 2023 +0900
+
+    solved : programmers 문자열과 영단어
+
+commit 3371785003d3820451009bec6942dd097d646eac
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sun Jun 18 22:47:45 2023 +0900
+
+    solved : programmers  부족한 금액 채우기
+
+commit 8a7e468e6d53848b4eb77e08f1b4125cd654023d
+Author: root <j.j.kant1948@gmail.com>
+Date:   Thu Jun 15 22:30:25 2023 +0900
+
+    solved : programmers 1차 다트게임
+
+commit 7d0b6c6433a565b1efbb5921f16170da7b26a598
+Author: root <j.j.kant1948@gmail.com>
+Date:   Thu Jun 15 22:02:26 2023 +0900
+
+    solved programmers 신규 아이디 추천
+
+commit 6d7026e4feb311c1318735a2a8a17ea16e59e4f1
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed Jun 14 23:07:56 2023 +0900
+
+    solved : programmers 모의고사
+
+commit 32e010d9a76f9798192596d1275d7b31c80842fb
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed Jun 14 22:52:46 2023 +0900
+
+    solved : programmers 소수 만들기
+
+commit 72f633e0f810aba12740c254c27941f4fff01f44
+Author: root <j.j.kant1948@gmail.com>
+Date:   Tue Jun 13 22:57:46 2023 +0900
+
+    solved : programmers 소수 찾기
+
+commit 6d5b5c0a4b8e5bf6331e1e91e3bcd920dffec62f
+Author: root <j.j.kant1948@gmail.com>
+Date:   Tue Jun 13 22:46:44 2023 +0900
+
+    solved : programmers 로또의 최고 순위와 최저 순위
+
+commit c21563de893db8d49d8f87a084cc55e977a5ddaf
+Author: root <j.j.kant1948@gmail.com>
+Date:   Mon Jun 12 01:01:07 2023 +0900
+
+    solved : programmers 체육복
+
+commit 5c6e54d502895738bd7e4c02fa2f6ec814820d70
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Jun 11 21:40:52 2023 +0900
+
+    solved : programmers 시저암호
+
+commit af6290c50796cdb9f3649e4f0dba2d8b9a82a091
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sun Jun 11 23:29:59 2023 +0900
+
+    solved : programmers 완주하지 못한 선수
+
+commit 7cfd862278ce546131514862b8b5e529abddbd09
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sun Jun 11 23:21:14 2023 +0900
+
+    solved : programmers 완주하지 못한 선수
+
+commit 5a430fe32f99e1db9064e494ad71d148766e9f2a
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sun Jun 11 23:04:28 2023 +0900
+
+    solved : programmers k 번쨰수
+
+commit 0fdee3ef00e65d43b92dccda84313abc738709b3
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Jun 11 21:22:36 2023 +0900
+
+    solved : programmers 없는 숫자 더하기
+
+commit 6487e03eed41ed0c141bb1134d88df5a1ad52f8e
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Jun 11 21:20:22 2023 +0900
+
+    solved : programmers 최소 직사각형
+
+commit 94c35b000923eff9999429e009458c019f5c2eb3
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Jun 11 19:28:05 2023 +0900
+
+    solved : programmers 나머지가 1이 되는 수 찿기
+
+commit e5d799200d1f14e08b9ef5344ed55dc844a65151
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Jun 11 19:14:57 2023 +0900
+
+    solved : programmers 신고결과 받기
+
+commit 6ba3df09b3241c509340e12c2e73d5e680df5510
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Jun 11 18:16:03 2023 +0900
+
+    solved : programmers 숫자 짝꿍
+
+commit 2c7a2112be0a22d8a5dabdd563b867626f5d618a
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Jun 11 18:04:29 2023 +0900
+
+    solved : programmers 삼총사
+
+commit 1b5e10d65b046d4b51b85cb99cb365ba8b26caf6
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Jun 11 17:55:43 2023 +0900
+
+    solved : programmers 콜라 문제
+
+commit b7d4750a8cf1b0b84b16f977fd36c8cfabe4ea11
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Jun 11 17:49:32 2023 +0900
+
+    solved : programmers 옹알이2
+
+commit e8b1190e27fe9bd62d5283581dbb6a011f3c2a18
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sat Jun 10 15:15:28 2023 +0900
+
+    solved : programmers 푸드 파이트 대회
+
+commit b3e2b8baabeebd3f26335ac991edc02264956de8
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sat Jun 10 15:06:23 2023 +0900
+
+    solved : programmers 햄버거 만들기
+
+commit 3a7a23e833ccd29bedb91e8c9227e4bbf3b0e18c
+Author: root <j.j.kant1948@gmail.com>
+Date:   Fri Jun 9 22:47:04 2023 +0900
+
+    solved : BOJ 1009
+
+commit 86bbb0bf981832925fda7885e1366816a4f6c39e
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Fri Jun 9 00:19:11 2023 +0900
+
+    solved : programmers 수 조작하기2:
+
+commit 7883dd7a9ade5742a3ce4ec3e1eda00249413d7d
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Fri Jun 9 00:12:32 2023 +0900
+
+    solved : programmers 수 조작하기
+
+commit 043bcb4821e73463332470f9ef2798079f1d2d2a
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Fri Jun 9 00:07:19 2023 +0900
+
+    solved : programmers  마지막 원소 수
+
+commit 993c24a59a646e6a2f9902f2e6bcd895efd1e685
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Fri Jun 9 00:00:50 2023 +0900
+
+    solved : programmers 이어붙인수
+
+commit 132d200ff6d3fb116f85915e78255443b32f8593
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Thu Jun 8 23:55:22 2023 +0900
+
+    solved : programmers 원소들의 곱과 합
+
+commit 56ef3cfea4791da90573440e92800e37c5b6a8dd
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Thu Jun 8 23:47:03 2023 +0900
+
+    solved : programmers 주사위 게임 2
+
+commit fa6a6c3ce2702e11678bf5a647bf92760631a6fb
+Author: root <j.j.kant1948@gmail.com>
+Date:   Thu Jun 8 15:21:08 2023 +0900
+
+    solved : programmers 두 원 사이의 정수쌍
+
+commit 35aaa006d4183fb006a8ff10d4b9463cffbdbd32
+Author: root <j.j.kant1948@gmail.com>
+Date:   Thu Jun 8 14:08:28 2023 +0900
+
+    solved : programmers  요격 시스템
+
+commit a120ccd45f487f2be92431f21297755cdf42acfc
+Author: root <j.j.kant1948@gmail.com>
+Date:   Thu Jun 8 13:38:38 2023 +0900
+
+    solved : programmers 사과장수
+
+commit 2b3a928c4639a3a7d6a7cfee358debc162229fd8
+Author: root <j.j.kant1948@gmail.com>
+Date:   Thu Jun 8 13:29:53 2023 +0900
+
+    solved : programmers 기사단원
+
+commit 808e86ab49ffadb543cc2af6be1da3a6238b6c1b
+Author: root <j.j.kant1948@gmail.com>
+Date:   Thu Jun 8 13:15:32 2023 +0900
+
+    solved : programmers 명예의 전당
+
+commit 0f8c7065947ee04c805addbfd97c2985908edf2c
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed Jun 7 21:30:56 2023 +0900
+
+    solving : BOJ  터렛
+
+commit f75ae26a30a8aa34d73bdc4bcfdc958eccb9cb59
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed Jun 7 19:58:00 2023 +0900
+
+    solved : programmers 둘만의 암호
+
+commit 6751b9b28151178c6ce7e6b94c75a8c06618598f
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed Jun 7 19:20:36 2023 +0900
+
+    solved : programmers 덧칠하기
+
+commit e4e057b8eb6c9858ab5cdb011981cd62391a8d3a
+Author: root <j.j.kant1948@gmail.com>
+Date:   Tue Jun 6 23:29:03 2023 +0900
+
+    solved : programmers 공원 산책
+
+commit cb20f089f6eeb83915dc190d86cb4e2e0568a1c8
+Author: root <j.j.kant1948@gmail.com>
+Date:   Tue Jun 6 22:45:29 2023 +0900
+
+    solved : programmers 추억 점수
+
+commit a982594832836fe9fbb7628d805a796dac15187c
+Author: root <j.j.kant1948@gmail.com>
+Date:   Tue Jun 6 22:34:59 2023 +0900
+
+    solved : programmers 달리기 경주
+
+commit a85a9fb2a95c1ddf9847e7762e801d3bcb10ac64
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Jun 4 21:14:41 2023 +0900
+
+    solved : programmers 달리기 경주
+
+commit 25649497ad04d4e7078a7f4dcc3f7c020e91ce23
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Jun 4 20:01:46 2023 +0900
+
+    solved : programmers 등차수열의 특정항만 더하기
+
+commit 9ab081bd79be0433a09c1fd95ebd92d321f148c4
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Jun 4 19:54:01 2023 +0900
+
+    solved 코드처리하기
+
+commit 24e7b681a3af178512d4423daba047a24784e7cb
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sun Jun 4 20:55:01 2023 +0900
+
+    solved : Programmers  flag에 따라 다른 값 반환하기
+
+commit e4c9d7f3d881bef0fb499d932119681d7125b048
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sun Jun 4 20:54:10 2023 +0900
+
+    solved : Programmers  조건 문자열
+
+commit 481862ec18d0253eca9a4a482333cefe475ddec8
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sun Jun 4 20:47:39 2023 +0900
+
+    solved : Programmers  홀짝에 따라 값 다르게 반환하기
+
+commit f429a1e2a7ecad30835b0340fdaa890a64b6f096
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Sun Jun 4 14:19:55 2023 +0900
+
+    solved :programmers 더 크게 합치기
+
+commit f9b9dbc9c9f17fe51abddb396341393f7030c1f9
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Sun Jun 4 14:16:11 2023 +0900
+
+    solved :programmers 더 크게 합치기
+
+commit 13ca07612fde8bb6962d67a068c87f260376de9e
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Sun Jun 4 13:47:34 2023 +0900
+
+    solved : Programmers 문자열 섞기
+
+commit 9fdebd571805711f894bafae9d72f55dd0cfbd52
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Jun 4 00:00:11 2023 +0900
+
+    solved : Programmers  문자열 겹쳐쓰기
+
+commit 27e97cf5ec46a1f332f4572e0e3578bd5369f2fe
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sat Jun 3 23:58:54 2023 +0900
+
+    solving : Programmers  문자열 겹쳐쓰기
+
+commit 954f636a0cdb1b29433ddf9e9ec6822639cf5a91
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Fri Jun 2 02:38:47 2023 +0900
+
+    solved : PG 홀짝 구분하기
+
+commit 69f2950476f17600a89319e5dc9b56b486b405d2
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Fri Jun 2 02:35:03 2023 +0900
+
+    solved :PG 문자열 돌리기
+
+commit 08839dd67f5f7d39c32839044dad7388dd933e4c
+Author: root <j.j.kant1948@gmail.com>
+Date:   Thu Jun 1 23:24:56 2023 +0900
+
+    solved : Programmers 정수부분
+
+commit 0823f1e4911095a7118b21f8eb5d603f7368b9dc
+Author: root <j.j.kant1948@gmail.com>
+Date:   Thu Jun 1 23:22:49 2023 +0900
+
+    solved : programmers 특수문자 ,  덧셈식 출력하기
+
+commit dc534848dde5fb8375c06d413296f83aa03e2d04
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Wed May 31 06:42:56 2023 +0900
+
+    solving : BOJ 가장 긴 바이토닉 부분 수열
+
+commit 6b457f0970f5a1ab48bc7533db2c86a6bc338b70
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Wed May 31 05:22:54 2023 +0900
+
+    solved : BOJ 가장 긴 감소하는 부분 수열
+
+commit 95f6437cf03b5332c8d88ead3d51a7788d34e278
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Wed May 31 05:09:58 2023 +0900
+
+    solved : BOJ 가장 큰 증가하는 부분 수열
+
+commit 5d7da8341a3f26a940232bb830cc762407dab1e2
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Wed May 31 04:53:27 2023 +0900
+
+    solving : BOJ 화학 식량
+
+commit 68ef7c00065fdb28c8a759fc3111395d6c1d18f9
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Wed May 31 03:00:29 2023 +0900
+
+    removed unneccessary
+
+commit d9011f2e8cdcdc59bec1adabc74cd126179153e3
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Wed May 31 02:59:45 2023 +0900
+
+    solved : programmers 두큐의 합 같게 만들기 iterator는 push_back 한뒤에는 다시 초기화 해야함. 그리고 벡터 v.erases(v.begin()) 은 오버헤드가 매우크다.
+
+commit 4f215ed0a8a369e768d60aa2a968238ffdcde6e7
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Tue May 30 17:02:55 2023 +0900
+
+    solving : programmers 듀큐의 합 같게 만들기
+
+commit 10d5c32786494d0e8f51fa8ee855f530571901a3
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Tue May 30 14:57:26 2023 +0900
+
+    solved : programmers 대소문자 바꿔서 출력하기
+
+commit aef6d7121a278054677fc2acc400b8c0ca5f8bdb
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Mon May 29 13:24:39 2023 +0900
+
+    solving : Programmers 두쿠의 합 같게 만들기
+
+commit 12aa6b93e9c746a45a7b48dd3790bfdff612828c
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sun May 28 19:11:46 2023 +0900
+
+    solving : programmers 두큐의 합 같게 만들기
+
+commit c72ffe7a7ed8ac72bca1b95b5df2c94a91b20240
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sun May 28 18:43:55 2023 +0900
+
+    solved : programmers 성격유형검사
+
+commit bd5048458327fd0409364ba7f78f34a1e3420f8f
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sat May 27 18:31:47 2023 +0900
+
+    solving : BOJ  분산처리
+
+commit 198d8cdab23345cb47dcf129f0698c92f08eed7b
+Author: root <j.j.kant1948@gmail.com>
+Date:   Fri May 26 01:30:04 2023 +0900
+
+    solving : Code force edu 149 B..
+
+commit 8df38d030c1ce832f717a2e2acd32db08fb63cd1
+Author: root <j.j.kant1948@gmail.com>
+Date:   Fri May 26 01:13:58 2023 +0900
+
+    solving : codeforce edu 149 B
+
+commit a34d613a00a753f7bd8bcf98bfc81ed95b03c21c
+Author: root <j.j.kant1948@gmail.com>
+Date:   Thu May 25 23:08:21 2023 +0900
+
+    solved : programmers 정수를 나선형으로 배치하기
+
+commit 82b0a5c8ffd11332bd7d6a364bfa20b4105369ed
+Merge: f7ae3c1 763c903
+Author: root <j.j.kant1948@gmail.com>
+Date:   Thu May 25 22:04:27 2023 +0900
+
+    solved : Programmers  키패트 누르기
+
+commit f7ae3c16bc127d5687c3257129bbbfb137c7c67b
+Author: root <j.j.kant1948@gmail.com>
+Date:   Thu May 25 22:04:02 2023 +0900
+
+    solved : Programmers  키패트 누르기
+
+commit 763c9034cc3ba21664a44de274e774c83bc4988e
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Wed May 24 20:56:21 2023 +0900
+
+    solved : programmers 크레인 인형 뽑기
+
+commit add2089f12e33cf4b4cd490aa2bdcce8f4112ea8
+Author: root <j.j.kant1948@gmail.com>
+Date:   Tue May 23 23:06:28 2023 +0900
+
+    git commit time issue
+
+commit 933c12d55917ee674a2b78b0c0a8a3a9d9bab95e
+Author: root <j.j.kant1948@gmail.com>
+Date:   Tue May 23 22:51:40 2023 +0900
+
+    solved :BOJ 10개 끊어서 출력하기
+
+commit 0bd1782850ba549dea310243170d951ff244694a
+Merge: 234f2c6 9f7b9fe
+Author: root <j.j.kant1948@gmail.com>
+Date:   Mon May 22 12:55:20 2023 +0900
+
+    solving : programmers 표현가능한 이진트리
+
+commit 234f2c6df31dd179a76f10cc07f0669f2c12242d
+Author: root <j.j.kant1948@gmail.com>
+Date:   Mon May 22 12:52:50 2023 +0900
+
+    solving : programmers  표현가능한 이진트리
+
+commit ed696b91eaa3c122fd5bb5a88ff4cd763dbae667
+Author: root <j.j.kant1948@gmail.com>
+Date:   Mon May 22 11:39:10 2023 +0900
+
+    solved : BOJ rot12
+
+commit 9f7b9fefa7c7de6c25bc423b75010f7391df49b4
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sun May 21 16:11:09 2023 +0900
+
+    solving : BOJ 0의 개수
+
+commit bf10971114c23e05bcb65c098f9f11ab4d52ad4d
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sun May 21 15:28:24 2023 +0900
+
+    solved : BOJ 알파벳 거리
+
+commit f154f57a3ce809c4e679a69810069851b134ef69
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Sat May 20 01:51:55 2023 +0900
+
+    solved : code force round 874 2sol
+
+commit 95a3fd7cfbee5507de2eb82fe777e90ffa4f05a7
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Fri May 19 23:19:20 2023 +0900
+
+    solved : BOJ 단어 공부
+
+commit 94f803f60054c0731ba2890b55a6b0a399ece6d5
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Fri May 19 23:08:47 2023 +0900
+
+    solved : BOJ 알파벳 갯수
+
+commit 47091b8faee2e5b55da0c93743d92c79df800766
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Fri May 19 22:55:50 2023 +0900
+
+    solved : BOJ 정수의 갯수
+
+commit 08a984b5cd28225658867cf3cc9f682e28c5d596
+Author: root <j.j.kant1948@gmail.com>
+Date:   Thu May 18 23:55:50 2023 +0900
+
+    solving : BOJ NN 첫글자를 대문자로
+
+commit e1114da80596f4bb045288949fd66eb9db26849f
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed May 17 03:01:04 2023 +0900
+
+    solving BOJ 수열의합 개선
+
+commit 42f31518ac54726db91ac0c55e43752d566c0971
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed May 17 02:32:22 2023 +0900
+
+    solved : BOJ 수열의 합  브루트 포스
+
+commit 1754af1e0842c9426f0469b8dcb07ccb57d12c2a
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed May 17 01:23:36 2023 +0900
+
+    solved : BOJ 동전0  반복문 말고 나누기 연산 쓰니 더빨라짐
+
+commit 15ac889fdd87d6507c29c6d2e8b904e7de053cc8
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed May 17 01:04:20 2023 +0900
+
+    콘테스트
+
+commit e16070a7508ecc5a232bbeb965c6ae7889df8577
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed May 17 00:45:33 2023 +0900
+
+    solved BOJ 피보나치
+
+commit a33071a3a9b81df7bd1610e84eb6e7bf6b3c9974
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed May 17 00:45:10 2023 +0900
+
+    solved BOJ 피보나치
+
+commit 9e556f4195cbc47d4d1836ddb3ac29a32863db9a
+Author: root <j.j.kant1948@gmail.com>
+Date:   Tue May 16 02:22:27 2023 +0900
+
+    solving : programmers 표현가능한 이진트리
+
+commit da1d29edfbda9f0e4deff30c6ebe8eaa075b890c
+Author: root <j.j.kant1948@gmail.com>
+Date:   Tue May 16 01:33:21 2023 +0900
+
+    a
+
+commit 3f2863b3e7554a36c76121859fe4e7f00d72018b
+Author: root <j.j.kant1948@gmail.com>
+Date:   Tue May 16 01:32:08 2023 +0900
+
+    solved : programmers 이모티콘 행사
+
+commit b7aab7c634c7b01ed7ddcd02c2aece33e01b38f0
+Author: root <j.j.kant1948@gmail.com>
+Date:   Tue May 16 01:29:59 2023 +0900
+
+    solved :programmers 이모티콘 할인행사
+
+commit 8a280b5ed7a9b8bb9ea5a315008abed1186483c5
+Author: root <j.j.kant1948@gmail.com>
+Date:   Mon May 15 01:45:33 2023 +0900
+
+    solved : code force round 873 ABC
+
+commit e672a70b4f1655547cf6cd5deab969f298b61bd3
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sat May 13 17:03:45 2023 +0900
+
+    solved : Codeforce karina array
+
+commit 52b9af6c22fd0979de8931182252a0c4e8ea7b83
+Merge: 7ec8367 26930c8
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sat May 13 17:01:45 2023 +0900
+
+    a
+
+commit 26930c8218c052fb13b628a681e3afd9976dc010
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sun May 14 17:59:36 2023 +0900
+
+    solved : BOJ 성적통계 xor로 버블 정렬을 할수있음.
+
+commit 54e615205d5aa40b5400182282df9be60c5fc27b
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sun May 14 16:53:47 2023 +0900
+
+    solved : BOJ 짝수를 찾아라
+
+commit b4d4dfbe57721b3dc5a15ff8bea1597084d01b26
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sun May 14 16:41:50 2023 +0900
+
+    solved : BOJ 알파벳 찾기
+
+commit 57a826e3776b1fb3a9c79325fe272be2ea2c1f18
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Sat May 13 17:18:40 2023 +0900
+
+    solved : BOJ 백설공주와 일곱난장이
+
+commit 7ec836798010418e55f7e5853ff7939d4df8e419
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sat May 13 16:58:10 2023 +0900
+
+    solved : Code force karina array
+
+commit 498eb0e90c6576f253ed1b24ec56af6fb47606d4
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Sat May 13 02:45:38 2023 +0900
+
+    happy
+
+commit c6a453a3163f89fff08d64bc03605943aef4ad26
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Sat May 13 01:34:33 2023 +0900
+
+    solved : code force A B C
+
+commit c8a575589cb03f6dcbf5a53fe742bfb27ea0ac25
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Fri May 12 23:12:14 2023 +0900
+
+    solved : BOJ 제로 벡터를 이용했는데, 배열로 구현한 스택을 사용하면 0ms로 끝낼수 있다
+
+commit e962e6f66cd0caaace850db313e15928e5841a17
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Fri May 12 23:00:55 2023 +0900
+
+    solved : BOJ 대회자리
+
+commit 83a4e9a3e9f18f085a575bf47fa736523608bd46
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Fri May 12 19:51:12 2023 +0900
+
+    solving : Code Force round 868 C.Strong Composite
+
+commit 56596915a8bf48985393eea748b4ca5db3570795
+Author: root <j.j.kant1948@gmail.com>
+Date:   Thu May 11 23:01:31 2023 +0900
+
+    installed ntp for contribution graph
+
+commit 03d2f27beee703d997ac26d66b77bae8ed73404d
+Author: root <j.j.kant1948@gmail.com>
+Date:   Thu May 11 22:48:41 2023 +0900
+
+    FUCK!
+
+commit caf221f85ecbebd8a7e1accc9ddd422f6c0b604b
+Author: root <j.j.kant1948@gmail.com>
+Date:   Thu May 11 22:47:31 2023 +0900
+
+    WTF
+
+commit 8cbc85e1bb4556c6b6d45bfa087afddf05139234
+Author: root <j.j.kant1948@gmail.com>
+Date:   Thu May 11 22:44:06 2023 +0900
+
+    time set
+
+commit 8ad65921160da06671073be949743f65abcdc006
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed May 10 23:49:09 2023 +0900
+
+    ??
+
+commit 1fe20a02a669fcea90d94084ca1dde334819d558
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed May 10 23:44:10 2023 +0900
+
+    solved : BOJ  점수집계, 입력 받고 소팅하면 쉽게 풀렷을듯
+
+commit 0f178bacc9b9d18097763f55cc2f49a8922851ed
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed May 10 23:24:30 2023 +0900
+
+    solved : BOJ 일곱 난쟁이
+
+commit ce425daeffda858b267be63a1cf25bfa207efe83
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed May 10 22:50:03 2023 +0900
+
+    solved : BOJ n번째 큰수
+
+commit 31380a5a602bb86dafebfafc06e566b86d13232e
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed May 10 22:29:22 2023 +0900
+
+    solved : BOJ 소트인사이드
+
+commit 9c5429a24987059bb54e59b799b5ffa0d9ca8431
+Author: root <j.j.kant1948@gmail.com>
+Date:   Tue May 9 18:31:46 2023 +0900
+
+    solved code force C.Bun lover, i used Dynam,ic programming but, input can range n^15 and timeout was 3 seconds. so i changed to O(1).
+
+commit 89e11aa8c51ae5c8b0155fe0468961e278758948
+Author: root <j.j.kant1948@gmail.com>
+Date:   Mon May 8 23:51:30 2023 +0900
+
+    done
+
+commit a6ce30f7c7bdabb7309b68003fe2c635bc7b8853
+Author: root <j.j.kant1948@gmail.com>
+Date:   Mon May 8 23:50:41 2023 +0900
+
+    solved BOJ 점수 계산
+
+commit ae7b10440b75738b0a0f1d17c41c7fcea8f5ef94
+Author: root <j.j.kant1948@gmail.com>
+Date:   Mon May 8 23:38:37 2023 +0900
+
+    solved BOJ 대표값2
+
+commit 110286ccdf6ed51fee0afc72bc11df65e39fcc03
+Author: root <j.j.kant1948@gmail.com>
+Date:   Mon May 8 23:27:45 2023 +0900
+
+    solved BOJ 상근날드
+
+commit 7bf5561f818e465c93b2dfa37a9c2b8c51b03886
+Author: root <j.j.kant1948@gmail.com>
+Date:   Mon May 8 23:00:07 2023 +0900
+
+    plz save my git
+
+commit 56aa1923199752f74cf7d785c19112bd121f0de2
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun May 7 19:38:48 2023 +0900
+
+    why commit not apply?
+
+commit d67bb275b83c5b324cc0a46d0cf5502eb4af62d9
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun May 7 19:35:33 2023 +0900
+
+    git test things not applied
+
+commit 0562201fcf90828ec30594a1b4783f3b214fa50e
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun May 7 19:33:09 2023 +0900
+
+    solved kakao 택배와 배달수거
+
+commit 4b786577c138f727bb0005e3cab0253817f0da0c
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun May 7 19:28:06 2023 +0900
+
+    solved kakao 택배와 배달수거하기
+
+commit debad82c733a0006779913038b44f3a003fd3a2a
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun May 7 18:39:17 2023 +0900
+
+    solved kakao 개인정보수집기간
+
+commit aa5cf5023d113284699e1590aa496a44ac17edbc
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun May 7 18:08:07 2023 +0900
+
+    solving kakao 개인정보수집기간 1test case fail
+
+commit 6f20dad745d5d47d08e8814b471ce8922b91d818
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun May 7 00:11:22 2023 +0900
+
+    cpp lower_bound and upper_bound finds bigger  or equal than val
+
+commit 5c7a9996d4fec8e6a3220abffeeb0576455409b9
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun May 7 00:05:31 2023 +0900
+
+    solved BOJ 약수.cpp
+
+commit 1049ae0f80afd3d7fb69fefd20fd9cc644113a8b
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sat May 6 23:20:24 2023 +0900
+
+    solved BOJ 세수정렬 multiset 사용
+
+commit 239e96712b243e1c84d14700c04531a24ed5cce0
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sat May 6 23:10:26 2023 +0900
+
+    solved BOJ  수정렬하기 set 컨테이너 공부
+
+commit cfbd4cb7af7aeeb02baaca40da4704c578603974
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Fri May 5 16:42:18 2023 +0900
+
+    solving BOJ 리코컨
+
+commit 69a7f9398de319a9c8d32e8036af993efa39e42e
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Fri May 5 15:49:19 2023 +0900
+
+    사탕게임
+
+commit 9a625de174a7f0d9a163ea5beed122762af151f3
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Fri May 5 14:51:49 2023 +0900
+
+    solved BOJ 돌게임
+
+commit 539dcdf9cd48187a122636691ed323272ac999aa
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Fri May 5 02:23:38 2023 +0900
+
+    solved BOJ 주차의신
+
+commit 7cd108f087d655e856d3664aaec67009eded88f2
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Fri May 5 01:11:59 2023 +0900
+
+    git test
+
+commit 13816a4683ac11bf3e358520cd71fe91fa6bbf84
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Thu May 4 22:14:34 2023 +0900
+
+    solved : code force round 869 b, had to know PS method
+
+commit 8afb8730a784bfecae6dd6ba43b3c55f87cc3e38
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Thu May 4 22:11:47 2023 +0900
+
+    solving : code force round 869 B
+
+commit bebca9c808a099e88cdd3ae1ee37b7856e9867c1
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed May 3 00:34:33 2023 +0900
+
+    solved BOJ 개수세기
+
+commit c635deba1153257e39f4f25852ac77ff952295c6
+Merge: a325b3b d6c7017
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed May 3 00:33:47 2023 +0900
+
+    Merge branch 'master' of github.com:insubkim/Problem_Solving
+
+commit d6c7017dc3216786b69f0dd5b3aff1b40ffe642e
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Wed May 3 22:46:54 2023 +0900
+
+    solved : BOJ
+
+commit a325b3be91187a514bda2f6cd1d0f37b508c0879
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed May 3 00:33:14 2023 +0900
+
+    solved BOJ 이진수
+
+commit 941ec0825658a8cc17011be35465937a0c7db5ea
+Author: root <j.j.kant1948@gmail.com>
+Date:   Tue May 2 23:48:56 2023 +0900
+
+    ohg
+
+commit c7f9e5489026d5ca319ce0e990bb78c08977a755
+Author: root <j.j.kant1948@gmail.com>
+Date:   Tue May 2 23:45:05 2023 +0900
+
+    c
+
+commit de3a2f5f081720159a852cf6e975bbc2987afcdb
+Merge: 97ab8b9 4326c93
+Author: root <j.j.kant1948@gmail.com>
+Date:   Tue May 2 23:40:47 2023 +0900
+
+    Merge branch 'master' of github.com:insubkim/Problem_Solving
+
+commit 97ab8b9d9deafe97657961d720251b18da04fe08
+Author: root <j.j.kant1948@gmail.com>
+Date:   Tue May 2 23:26:30 2023 +0900
+
+    solved BOJ 3051
+
+commit 4326c931dfdfdf6f8a2233831095a69c41e76e29
+Author: MoongMoongBook <j.j.kant1948@gmail.com>
+Date:   Tue May 2 21:03:24 2023 +0900
+
+    fixed : code force 869 round A. politics n^3 to n^2
+
+commit 7af3eacece25103cc99223cd0331a174908df6ca
+Author: root <j.j.kant1948@gmail.com>
+Date:   Tue May 2 12:31:31 2023 +0900
+
+    solving BOJ 인형들 성능개선  n^2
+
+commit 2644b7eed4850cdd6acb4369078b7e80009a94d9
+Author: root <j.j.kant1948@gmail.com>
+Date:   Tue May 2 12:00:57 2023 +0900
+
+    solved BOJ 인형들
+
+commit daa4006a2733d8471ca9a29c9c60f10eb6020c1a
+Author: root <j.j.kant1948@gmail.com>
+Date:   Mon May 1 23:58:49 2023 +0900
+
+    solving BOJ 인형들
+
+commit 2f4d86130263855b832a7514f3ba64cd9d5f8967
+Author: root <j.j.kant1948@gmail.com>
+Date:   Mon May 1 23:43:56 2023 +0900
+
+    git test
+
+commit 5797aa461e1be94adaa53ecc9ff09221afee24ac
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Apr 30 23:28:34 2023 +0900
+
+    solving BOJ not done
+
+commit 9a45705cb62fe3488c5295d6e6afc6caab3dfc7e
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Apr 30 23:26:49 2023 +0900
+
+    solving BOJ 15954
+
+commit fd8b41bbd45cc6751f56356a2669a55b7b7d6f56
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Apr 30 18:51:25 2023 +0900
+
+    solved BOJ 오타맨 조창영
+
+commit 60c5c5e1a05b0d6f4d49571881f20b3317056a01
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Apr 30 18:19:43 2023 +0900
+
+    solved : BOJ 대표값
+
+commit 0080e48d083e7ed1f62018699cb18c60618fce5c
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Apr 30 18:03:18 2023 +0900
+
+    solved : BOJ 숫자의 개수
+
+commit 407f9d9216bd54925bb7db925edd2a466d5b9bdf
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Apr 30 17:50:13 2023 +0900
+
+    solved BOJ 지능형 기차2
+
+commit cb460f7c2dd78a038e8fad898884c21ca0aa6168
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Apr 30 17:42:40 2023 +0900
+
+    solved BOJ 상수
+
+commit ecc694e9e0e5a0c8ca4af4a279f38e4baf4e42df
+Merge: c8e8f64 109aba5
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Apr 30 17:23:54 2023 +0900
+
+    attend : Code force 869 round
+
+commit c8e8f64bd0b8ab57e1c9e7f51ed41e6f6dc0bc69
+Author: root <j.j.kant1948@gmail.com>
+Date:   Sun Apr 30 17:21:58 2023 +0900
+
+    add : attended Code Force 869 round
+
+commit 109aba566ba954fdac99f06c6b5adb28cedad482
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Sat Apr 29 08:03:14 2023 +0900
+
+    add : vector pair multiset map
+
+commit 5afe8b07e1d695876de1cb07842c904bd125e98f
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Sat Apr 29 02:26:20 2023 +0900
+
+    add : vector print
+
+commit 0789cb9ec3f0704fab3107db4410e5ed9e4619f5
+Author: Insub Kim <j.j.kant1948@gmail.com>
+Date:   Fri Apr 28 22:45:12 2023 +0900
+
+    add : practice multiset
+
+commit e79ab5b22d3a57d36870ed2d5d4fcc2e22591e05
+Author: root <j.j.kant1948@gmail.com>
+Date:   Fri Apr 28 01:37:16 2023 +0900
+
+    add : CP code force
+
+commit f82bde813e9cf6da51882f219b8ae4f6bf7857ec
+Author: root <j.j.kant1948@gmail.com>
+Date:   Thu Apr 27 23:34:02 2023 +0900
+
+    add : solved code force threatre square
+
+commit b163dd18c5b6d5f4b80a2277e9dbc6ad6d0153c5
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed Apr 26 13:40:38 2023 +0900
+
+    add : solved CP permutation
+
+commit 8031c2d596e0e00598a1ddd604b0c30c66fdd411
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed Apr 26 12:41:20 2023 +0900
+
+    add : solved CP subset
+
+commit d9504117bfe8298ad8da75e8f0bdd7383a83e82a
+Author: root <j.j.kant1948@gmail.com>
+Date:   Wed Apr 26 12:24:31 2023 +0900
+
+    add : solved BOJ 11053 with dynamic programming
