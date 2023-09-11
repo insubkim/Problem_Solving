@@ -8,7 +8,7 @@ using namespace std;
 int solution(int n, int k, vector<int> enemy) {
     priority_queue<int> h;
     size_t i = 0;
-    while ((k > 0 ||  n >= enemy[i]) && i < enemy.size()){
+    while ((k > 0 || n >= enemy[i]) && i < enemy.size()){
         if (n >= enemy[i]){
             h.push(enemy[i]);
             n -= enemy[i];
@@ -18,6 +18,7 @@ int solution(int n, int k, vector<int> enemy) {
                 n += h.top();
                 n -= enemy[i];
                 h.pop();
+                h.push(enemy[i]);
             }
         }
         i++;
