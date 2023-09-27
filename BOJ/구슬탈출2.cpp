@@ -6,8 +6,9 @@
 using namespace std;
 
 typedef struct s_visited {
-  vector<vector<int>> red;
-  vector<vector<int>> blue;
+  int v[10][10][10][10] = {
+      0,
+  };
 } t_visited;
 
 typedef struct s_pos {
@@ -64,7 +65,7 @@ t_pos rollDown(int &redOut, int &blueOut) {
       if (map[tmp.blueY + 1][pos.blueX] == 'O') blueOut = 1;
       while (map[tmp.redY + 1][pos.redX] == '.') tmp.redY++;
       if (map[tmp.redY + 1][pos.redX] == 'O') redOut = 1;
-      if (tmp.redY == tmp.blueY) tmp.blueY--;
+      if (tmp.redY == tmp.blueY) tmp.redY--;
     }
   } else {
     while (map[tmp.redY + 1][pos.redX] == '.') tmp.redY++;
@@ -136,54 +137,46 @@ int bfs(void) {
     int redOut = 0;
     int blueOut = 0;
     tmp = rollUp(redOut, blueOut);
-    if (!blueOut && (!(visited.red[tmp.redY][tmp.redX] &&
-                       visited.blue[tmp.blueY][tmp.blueX]) ||
-                     redOut)) {
+    if (!blueOut &&
+        (!visited.v[tmp.redY][tmp.redX][tmp.blueY][tmp.blueX] || redOut)) {
       tmp.cnt = pos.cnt + 1;
       if (redOut) return tmp.cnt;
       q.push(tmp);
-      visited.red[tmp.redY][tmp.redX] = 1;
-      visited.blue[tmp.blueY][tmp.blueX] = 1;
     }
+    visited.v[tmp.redY][tmp.redX][tmp.blueY][tmp.blueX] = 1;
 
     redOut = 0;
     blueOut = 0;
     tmp = rollRight(redOut, blueOut);
-    if (!blueOut && (!(visited.red[tmp.redY][tmp.redX] &&
-                       visited.blue[tmp.blueY][tmp.blueX]) ||
-                     redOut)) {
+    if (!blueOut &&
+        (!visited.v[tmp.redY][tmp.redX][tmp.blueY][tmp.blueX] || redOut)) {
       tmp.cnt = pos.cnt + 1;
       if (redOut) return tmp.cnt;
       q.push(tmp);
-      visited.red[tmp.redY][tmp.redX] = 1;
-      visited.blue[tmp.blueY][tmp.blueX] = 1;
     }
+    visited.v[tmp.redY][tmp.redX][tmp.blueY][tmp.blueX] = 1;
 
     redOut = 0;
     blueOut = 0;
     tmp = rollDown(redOut, blueOut);
-    if (!blueOut && (!(visited.red[tmp.redY][tmp.redX] &&
-                       visited.blue[tmp.blueY][tmp.blueX]) ||
-                     redOut)) {
+    if (!blueOut &&
+        (!visited.v[tmp.redY][tmp.redX][tmp.blueY][tmp.blueX] || redOut)) {
       tmp.cnt = pos.cnt + 1;
       if (redOut) return tmp.cnt;
       q.push(tmp);
-      visited.red[tmp.redY][tmp.redX] = 1;
-      visited.blue[tmp.blueY][tmp.blueX] = 1;
     }
+    visited.v[tmp.redY][tmp.redX][tmp.blueY][tmp.blueX] = 1;
 
     redOut = 0;
     blueOut = 0;
     tmp = rollLeft(redOut, blueOut);
-    if (!blueOut && (!(visited.red[tmp.redY][tmp.redX] &&
-                       visited.blue[tmp.blueY][tmp.blueX]) ||
-                     redOut)) {
+    if (!blueOut &&
+        (!visited.v[tmp.redY][tmp.redX][tmp.blueY][tmp.blueX] || redOut)) {
       tmp.cnt = pos.cnt + 1;
       if (redOut) return tmp.cnt;
       q.push(tmp);
-      visited.red[tmp.redY][tmp.redX] = 1;
-      visited.blue[tmp.blueY][tmp.blueX] = 1;
     }
+    visited.v[tmp.redY][tmp.redX][tmp.blueY][tmp.blueX] = 1;
   }
   return -1;
 }
@@ -194,27 +187,23 @@ int main() {
   vector<int> k(M, 0);
   for (size_t i = 0; i < N; i++) {
     cin >> tmp;
-    visited.red.push_back(k);
-    visited.blue.push_back(k);
     int j;
     j = tmp.find('R');
     if (j != string::npos) {
-      visited.red[i][j] = 1;
       tmp[j] = '.';
       pos.redY = i;
       pos.redX = j;
     }
     j = tmp.find('B');
     if (j != string::npos) {
-      visited.blue[i][j] = 1;
       tmp[j] = '.';
       pos.blueY = i;
       pos.blueX = j;
     }
     map.push_back(tmp);
   }
+  visited.v[pos.redY][pos.redX][pos.blueY][pos.blueX] = 1;
   pos.cnt = 0;
-  // run bfs
   cout << bfs();
   return 0;
 }
