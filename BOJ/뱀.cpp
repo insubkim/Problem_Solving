@@ -2,6 +2,7 @@
 #include <iostream>
 #include <utility>
 #include <queue>
+#include <deque>
 
 
 using namespace std;
@@ -44,15 +45,14 @@ int solve(void){
   int head_dir = RIGHT;
   int head_x = 0;
   int head_y = 0;
-  int tail_x = 0;
-  int tail_y = 0;
   board[head_y][head_x] = SNAKE;
-  queue<int> route;
-  route.push(RIGHT);
+  deque<pair<int, int> > snake_body;
+  snake_body.push_back(make_pair(head_x, head_y));
   while (1){
     //move head
     if (snake_moves.front().first == sec){
       int rotate = snake_moves.front().second;
+      snake_moves.pop();
       if (rotate == LEFT){
         head_dir--;
       } else {
@@ -63,10 +63,7 @@ int solve(void){
       } else if (head_dir > DOWN){
         head_dir = LEFT;
       }
-      snake_moves.pop();
     }
-    //update route
-    route.push(head_dir);
     //update coord
     if (head_dir == LEFT){
       head_x--;
@@ -83,23 +80,17 @@ int solve(void){
       || board[head_y][head_x] == SNAKE){
       status = DIE;
     }
+    //update snake body
+    snake_body.push_back(make_pair(head_x, head_y));
     //time
     sec++;
     if (status == DIE) break;
     //update map-tail
     if (board[head_y][head_x] != APPLE){
+      int tail_x = snake_body.front().first;
+      int tail_y = snake_body.front().second;
+      snake_body.pop_front();
       board[tail_y][tail_x] = EMPTY;
-      int tail_dir = route.front();
-      route.pop();
-      if (tail_dir == LEFT){
-        tail_x--;
-      } else if (tail_dir == RIGHT){
-        tail_x++;
-      } else if (tail_dir == UP){
-        tail_y--;
-      } else {
-        tail_y++;
-      }
     }
     //update map-head
     board[head_y][head_x] = SNAKE;
