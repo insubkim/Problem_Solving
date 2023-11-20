@@ -4,6 +4,7 @@
         "valarray": "cpp",
         "random": "cpp",
         "queue": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "ostream": "cpp"
     }
 }
