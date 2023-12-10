@@ -44,11 +44,17 @@ bool  cmp(const vector<int>& a, const vector<int>& b) {
  *  추출 정렬 배열
  */
 vector<vector<int> > solution(vector<vector<int> > data, string ext, int val_ext, string sort_by) {
-    vector<vector<int>> answer;
-
-    answer = extractByCriterion(data, ext, val_ext);
-    //set sort index
-    index_for_sort_criterion = getCriterionIndex(sort_by);
-    sort(answer.begin(), answer.end(), cmp);
-    return answer;
+    int index_for_criterion = getCriterionIndex(ext);
+    auto remove_list_it = remove_if(data.begin(), data.end(), \
+      [index_for_criterion, val_ext](const auto& row) -> bool {
+        return !(row[index_for_criterion] < val_ext);
+      });
+    data.erase(remove_list_it, data.end()); 
+    
+    index_for_criterion = getCriterionIndex(sort_by);
+    sort(data.begin(), data.end(), \
+      [index_for_criterion](const auto&a, const auto&b) -> bool {
+        return a[index_for_criterion] < b[index_for_criterion];
+      });
+    return data;
 }
