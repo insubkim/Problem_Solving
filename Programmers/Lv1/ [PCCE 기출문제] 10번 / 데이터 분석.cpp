@@ -1,37 +1,9 @@
 #include <string>
 #include <vector>
+#include <map>
 #include <algorithm>
 
 using namespace std;
-
-int getCriterionIndex(const string& ext) {
-  if (ext == "code")    return 0;
-  if (ext == "date")    return 1;
-  if (ext == "maximum") return 2;
-  if (ext == "remain")  return 3;
-  return -1;
-}
-
-vector<vector<int> >  extractByCriterion(const vector<vector<int> >& data, const string& ext, int val_ext) {
-  vector<vector<int>> ext_data;
-  // 추출 카테고리 인덱스
-  int                 index_for_ext = getCriterionIndex(ext);
-  
-  // 추출
-  for (size_t i = 0; i < data.size(); i++) {
-    if (data[i][index_for_ext] < val_ext) {
-      ext_data.push_back(data[i]);
-    }
-  }
-  return ext_data;
-}
-
-int index_for_sort_criterion = -1; // 비교 카테고리 인덱스
-
-bool  cmp(const vector<int>& a, const vector<int>& b) {
-  //use global var for criterion
-  return a[index_for_sort_criterion] < b[index_for_sort_criterion];  
-}
 
 /*
  *  parameter
@@ -44,17 +16,23 @@ bool  cmp(const vector<int>& a, const vector<int>& b) {
  *  추출 정렬 배열
  */
 vector<vector<int> > solution(vector<vector<int> > data, string ext, int val_ext, string sort_by) {
-    int index_for_criterion = getCriterionIndex(ext);
-    auto remove_list_it = remove_if(data.begin(), data.end(), \
-      [index_for_criterion, val_ext](const auto& row) -> bool {
-        return !(row[index_for_criterion] < val_ext);
-      });
-    data.erase(remove_list_it, data.end()); 
-    
-    index_for_criterion = getCriterionIndex(sort_by);
-    sort(data.begin(), data.end(), \
-      [index_for_criterion](const auto&a, const auto&b) -> bool {
-        return a[index_for_criterion] < b[index_for_criterion];
-      });
-    return data;
+  unordered_map<string, int> criterion = 
+  {
+    {"code",    0},
+    {"date",    1},
+    {"maximum", 2},
+    {"remain",  3},
+  };
+
+  auto remove_list_it = remove_if(data.begin(), data.end(), \
+    [idx = criterion[ext], val_ext](const auto& row) -> bool {
+      return !(row[idx] < val_ext);
+    });
+  data.erase(remove_list_it, data.end()); 
+  
+  sort(data.begin(), data.end(), \
+    [idx = criterion[sort_by]](const auto&a, const auto&b) -> bool {
+      return a[idx] < b[idx];
+    });
+  return data;
 }
