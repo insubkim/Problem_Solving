@@ -13,10 +13,11 @@ int deleteZero(string &s) {
 
 void  binaryRepresentation(string& s) {
   s = std::bitset<64>(s.size()).to_string();
-  size_t i = 0;
-  while (i < s.size() && s[i] == '0')
-    i++;
-  s.erase(s.begin(), s.begin() + i);
+  bool flag = true;
+  s.erase(remove_if(s.begin(), s.end(), [&flag] (char c) -> bool {
+    if (c == '1') flag = false;
+    return flag && c == '0' ? true : false;
+  }), s.end());
 }
 
 vector<int> solution(string s) {
