@@ -1,32 +1,37 @@
 #include <iostream>
 #include <string>
-#include <algorithm>
+#include <stack>
 
 using namespace std;
 
 int solution(string s)
 {
-    bool    flag;
-    do {
-      flag = false;
+    stack<char> st;
 
-      string  tmp;
-      for (size_t i = 0; i < s.size(); i++) {
-        if (i + 1 < s.size() && s[i] == s[i + 1]) {
-          flag = true;
-          i++;
-        } else {
-          tmp.push_back(s[i]);
-        }
+    for (size_t i = 0; i < s.size(); i++) {
+      if (!st.empty() && st.top() == s[i]) {
+        st.pop();
+        continue ;
+      } 
+      st.push(s[i]);
+    }
+
+    while (!st.empty()) {
+      char top = st.top();
+      st.pop();
+      if (!st.empty() && st.top() == top) {
+        st.pop();
+        continue;
       }
-      s = tmp;
-    } while (flag);
-    return !s.size();
+      st.push(top);
+      break ;
+    }
+    return st.empty();
 }
 
 
 #include <iostream>
 int  main() {
-  int a = solution("caabbc");
+  int a = solution("baabaa");
   cout << a << endl;
 }
