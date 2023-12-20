@@ -15,17 +15,6 @@ int solution(string s)
       } 
       st.push(s[i]);
     }
-
-    while (!st.empty()) {
-      char top = st.top();
-      st.pop();
-      if (!st.empty() && st.top() == top) {
-        st.pop();
-        continue;
-      }
-      st.push(top);
-      break ;
-    }
     return st.empty();
 }
 
