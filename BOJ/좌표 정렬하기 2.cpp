@@ -18,8 +18,8 @@ int main(void) {
   }
   sort(nums.begin(), nums.end(), cmp);
   for (int i = 0; i < n; i++) {
-    // cout << nums[i].first << " " << nums[i].second << endl;
-    printf("%d %d\n", nums[i].first, nums[i].second);
+    cout << nums[i].first << " " << nums[i].second << "\n";
+    // printf("%d %d\n", nums[i].first, nums[i].second);
   }
   // for_each(nums.begin(), nums.end(), [] (pair<int, int>& num) {
   //   cout << num.first << " " << num.second << endl;
