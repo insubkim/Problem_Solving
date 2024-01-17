@@ -5,8 +5,10 @@
 
 using namespace std;
 
-void  solve(int width, int height, array<array<int, 8>, 8>& map, vector<array<int, 2> >& cctv) {
-  int unseen = width * height;
+int m = -1;
+int width, height;
+
+void  solve(array<array<int, 8>, 8> map, vector<array<int, 2> > cctv, int cnt) {
 
   vector<int> cctv_dir(cctv.size(), 0);
 
@@ -14,7 +16,6 @@ void  solve(int width, int height, array<array<int, 8>, 8>& map, vector<array<in
 
 
 int main() {
-  int width, height;
   array<array<int, 8>, 8> map;
   vector<array<int, 2> > cctv;
   
@@ -29,5 +30,5 @@ int main() {
       }
     } 
   }
-  solve(width, height, map, cctv);
+  solve(map, cctv, 0);
 }
