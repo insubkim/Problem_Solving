@@ -12,8 +12,7 @@ void    solve(void){
     int x1,y1,r1;
     int x2,y2,r2;
 
-    cin >> x1 >> y1 >> r1 >> x2 >> y2 >> r2;
-    
+    cin >> x1 >> y1 >> r1 >> x2 >> y2 >> r2;    
     // 위치 같을때
     if (x1 == x2 && y1 == y2){
         cout << r1 == r2 ? 1 : 0 << endl;  
@@ -28,7 +27,7 @@ void    solve(void){
     else if (d > r1 + r2){ // 두 점 거리가 각각의 위치 합보다 클때
         cout << 0 << endl;
     }else{ // 두 점 거리가 각각의 위치 합이 작을때
-        if (abs(r1 - r2) < d && d < r1 + r2) { // 두 원이 접하는 곳이 있고 한점에서 접하진 않음.
+        if (abs(r1 - r2) < d) { // 두 원이 접하는 곳이 있고 한점에서 접하진 않음.
             cout << 2 << endl;
         } else if (abs(r1 - r2) == d) { // 두 점 거리 뺀값이  반지름 뺀 값
             cout << 1 << endl;
