@@ -16,15 +16,12 @@ void    solve(void){
     
     // 위치 같을때
     if (x1 == x2 && y1 == y2){
-        if (r1 == r2) // 거리 같음
-            cout << -1 << endl;  
-        else //거리 다름
-            cout << 0 << endl;  
+        cout << r1 == r2 ? 1 : 0 << endl;  
         return ;
     }
     
-    //두 점 거리 구함
-    double d = sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+    // 거리가 다를 때, 두 점 거리 구함
+    double d = sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2));
     
     if (d == r1 + r2) // 두 점 거리와 각각의 위치 합이 같을때
         cout << 1 << endl;
