@@ -1,9 +1,16 @@
 #include <iostream>
 #include <vector>
-
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netinet/ip.h> 
 using namespace std;
 
 int main() {
+  sockaddr_in a;
+
+  a.sin_family = AF_INET;
+  a.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
+  a.sin_port = htons(atoi("1"));
   int N, B, C;
   cin >> N;
   vector<int> A(N);
