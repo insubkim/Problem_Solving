@@ -8,19 +8,16 @@ int main() {
 
   cin >> X >> Y;
   
-  int Z = ((long double)Y * 100) / X;
+  int Z = (Y * 100) / X;
   
   if (Z >= 99) {
     cout << -1 << endl;
     return 0;
   }
 
-  int cnt = 0;
-  while (Z == (int)(((long double)Y * 100) / X)) {
-    X++;
-    Y++;
-    cnt++;
-  }
-  
-  cout << cnt << endl;
+  int result = (Y * 100 - Z * X - X) / (Z - 99);
+  if ((Y * 100 - Z * X - X) % (Z - 99))
+    result++;
+  cout << result  << endl;
+
 }
