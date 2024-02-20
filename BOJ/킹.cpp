@@ -1,58 +1,83 @@
 #include <iostream>
 #include <cmath>
 #include <string>
+#include <assert.h>
 
 using namespace std;
 
-int map[8][8];
-char lo_king[2];
-char lo_rock[2];
-
-int n;
-
-int dx[255];
-int dy[255];
+int king[2];
+int rock[2];
 
 bool  check_map_range(int x, int y) {
   return 0 <= x && x < 8 \
     &&  0 <= y && y < 8;  
 }
 
+/*
+    R : 한 칸 오른쪽으로
+    L : 한 칸 왼쪽으로
+    B : 한 칸 아래로
+    T : 한 칸 위로
+    RT : 오른쪽 위 대각선으로
+    LT : 왼쪽 위 대각선으로
+    RB : 오른쪽 아래 대각선으로
+    LB : 왼쪽 아래 대각선으로
+ */
+void  try_move(int* x, int* y, string mv) {
+  if (mv.find('R') != string::npos) ++*x;
+  if (mv.find('L') != string::npos) --*x;
+  if (mv.find('B') != string::npos) ++*y;
+  if (mv.find('T') != string::npos) --*y;
+  assert(-1 <= *x && *x <= 8);
+  assert(-1 <= *y && *y <= 8);
+}
+
+void  input(int in[2]) {
+  // 1 -> 7 | a -> 0
+  // 2 -> 6 | b -> 1
+  // ..     | ..
+  // 8 -> 0 | h -> 7
+  char x,y;
+  cin >> x >> y;
+  in[0] = x - 'A';
+  in[1] = 8 - (y - '0');
+  assert(0 <= in[0] && in[0] <= 7);
+  assert(0 <= in[1] && in[1] <= 7);
+}
+
 int main() {
-  cin >> lo_king[0] >> lo_king[1];
-  cin >> lo_rock[0] >> lo_rock[1];
-  lo_king[0] = lo_king[0] - 'A'; lo_king[1] = 8 - (lo_king[1] - '0');
-  lo_rock[0] = lo_rock[0] - 'A'; lo_rock[1] = 8 - (lo_king[1] - '0');
-  
-  dx['R'] = 1; dx['L'] = -1; dx['B'] = 0; dx['T'] = 0;
-  dy['R'] = 0; dy['L'] =  0; dy['B'] = 1; dy['T'] = -1;
+  input(king);
+  input(rock);
 
-  cin >> n;
-  for (int i = 0; i < n; i++) {
-    string in;
-    cin >> in;
-
-    int dxx = 0;
-    int dyy = 0;
-
-    for (size_t j = 0; j < in.size(); j++) {
-      dxx += dx[in[j]];
-      dyy += dy[in[j]];
-    }
-
-    int x = lo_king[0] + dxx;
-    int y = lo_king[1] + dyy;
-
-    if (!check_map_range(x, y)) continue;
-    if (x == lo_rock[0] && y == lo_rock[1]) {
-      if (!check_map_range(lo_rock[0] + dxx, lo_rock[1] + dyy)) continue;
-      lo_king[0] += dxx; lo_king[1] += dyy;
-      lo_rock[0] += dxx; lo_rock[1] += dyy;
+  int t;
+  cin >> t;
+  while (t--) {
+    string mv;
+    cin >> mv;
+    int x = king[0];
+    int y = king[1];
+    //move
+    try_move(&x, &y, mv);
+    if (!check_map_range(x, y)) 
+      continue;
+    if (x == rock[0] && y == rock[1]) {
+      int xx = rock[0];
+      int yy = rock[1];
+      try_move(&xx, &yy, mv);
+      if (!check_map_range(xx, yy))
+        continue;
+      king[0] = x;
+      king[1] = y;
+      rock[0] = xx;
+      rock[1] = yy;
+      assert(x != xx || y != yy);
     } else {
-      lo_king[0] = x;
-      lo_king[1] = y;
+      king[0] = x;
+      king[1] = y;
     }
+    assert(king[0] != rock[0] || king[1] != rock[1]);
   }
-  cout << (char)(lo_king[0] + 'A') << 8 - lo_king[1] << endl;
-  cout << (char)(lo_rock[0] + 'A') <<  8 - lo_rock[1] << endl;
+
+  cout << (char)(king[0] + 'A') << 8 - king[1] << "\n";
+  cout << (char)(rock[0] + 'A') << 8 - rock[1] << "\n";
 }
