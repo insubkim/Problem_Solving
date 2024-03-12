@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.io.*;
 import java.util.Scanner;
 import java.util.LinkedList;
+import java.util.ListIterator;
 import java.util.Arrays;
 
 public class Boj {
@@ -15,27 +16,36 @@ public class Boj {
     LinkedList<Character> list = new LinkedList<Character>();
     str.chars().forEach(c -> list.add((char)c));
   
-    int idx = list.size();
+    ListIterator<Character> iter = list.listIterator(list.size());
+
     for (int i = 0; i < M; i++) {
       String line = br.readLine();
 
       char c = line.charAt(0);
       switch(c) {
         case 'L':
-          idx += idx != 0 ? -1 : 0;
+          if (iter.hasPrevious()) 
+            iter.previous();
           break ;
         case 'D':
-          idx += idx != list.size() ? 1 : 0;
+          if (iter.hasNext())
+            iter.next();
           break ;
         case 'B':
-          if (idx != 0) list.remove(--idx);
+          if (iter.hasPrevious()){
+            iter.previous();
+            iter.remove();
+          }
           break ;
         case 'P':
-          list.add(idx++, line.charAt(2));
+          iter.add(line.charAt(2));
           break ;
       }
     }
-
-    list.forEach(c -> System.out.print(c));
+    for (Character c : list) {
+      bw.write(c);
+    } 
+    bw.flush();
+    bw.close();
   }
 }
