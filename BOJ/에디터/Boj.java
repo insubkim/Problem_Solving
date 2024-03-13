@@ -42,6 +42,7 @@ public class Boj {
           break ;
       }
     }
+    
     for (Character c : list) {
       bw.write(c);
     } 
