@@ -1,19 +1,22 @@
-#include <bits/stdc++.h>
+#include <iostream>
 
 #define REP(i, a, b) for (int i = a; i <= b; i++)
 
 using namespace std;
 
 int main(){
-    char a[101] = {0,};
-    cin >> a;
-    int i = 0;
-    int s = 0;
-    while (a[i]){
-        if (a[i] == 'a' || a[i] == 'e' || a[i] == 'i' || a[i] == 'o' || a[i] == 'u')
-            s++;
-        i++;
+    string str;
+
+    while (1) {
+        int num = 0;
+        getline(cin, str);
+        if (str == "#") break ;
+        for (auto x : str) {
+            if (x == 'a' || x ==  'e' || x ==  'i' ||  x == 'o' || x == 'u' || \
+                x == 'A' || x ==  'E' || x ==  'I' ||  x == 'O' || x == 'U' )
+                num++;
+        }
+        cout << num << endl;
     }
-    cout << s << endl;
     return 0;
 }
