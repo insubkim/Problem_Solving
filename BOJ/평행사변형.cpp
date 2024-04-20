@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <cassert>
+#include <printf.h>
 
 using namespace std;
 
@@ -12,18 +13,22 @@ int main() {
   // 일직선 확인
   // 둘레 구하기
 
-  int ax,ay;
-  int bx,by;
-  int cx,cy;
+  double ax,ay;
+  double bx,by;
+  double cx,cy;
   cin >> ax >> ay;
   cin >> bx >> by;
   cin >> cx >> cy;
 
-  double inc1 = ((double)by - ay) / ((double)bx - ax);
-  double inc2 = ((double)cy - by) / ((double)cx - bx);
-  
-  if (inc1 == inc2) {
-    cout << -1 << endl;
+  // 일직선 확인
+  if ((by - ay) * (cx - bx) == (bx - ax) * (cy - by)) {
+    // cout << -1 << endl;
+    printf("%.15lf\n", -1.0);
+    return 0;
+  }
+  if ((ax == bx && ay == by) || (ax == cx && ay == cy) || (cx == bx && cy == by)){
+    // cout << -1 << endl;
+    printf("%.15lf\n", -1.0);
     return 0;
   }
 
@@ -40,5 +45,6 @@ int main() {
   double min_round = min(round1, min(round2, round3));
   double max_round = max(round1, max(round2, round3));
   
-  cout << max_round - min_round << endl;
+  // cout << max_round - min_round << endl;
+  printf("%.15lf\n", max_round - min_round);
 }
