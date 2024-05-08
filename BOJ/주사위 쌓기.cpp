@@ -4,83 +4,32 @@
 
 using namespace std;
 
-typedef enum e_dir {
-  UP = 0,
-  LEFT,
-  FRONT,
-  RIGHT,
-  BACK,
-  BOTTOM
-} t_dir;
-
-int N;
-int dices[10001][6];
-
-e_dir get_up_dir(e_dir bottom) {
-  switch (bottom)
-  {
-  case UP:
-    return BOTTOM;
-  case LEFT:
-    return RIGHT;
-    break;
-  case FRONT:
-    return BACK;
-    break;
-  case RIGHT:
-    return LEFT;
-    break;
-  case BACK:
-    return FRONT;
-    break;
-  case BOTTOM:
-    return FRONT;
-    break;
-  default:
-    break;
-  }
-  return UP;
-}
-
-int solve(e_dir bottom, int index) {
-  int max_num = 0;
-  e_dir up = get_up_dir(bottom);
-
-  std::initializer_list<e_dir> all_E = {UP, LEFT, FRONT, RIGHT, BACK, BOTTOM};
-  for (auto e : all_E) {
-    if (e == bottom || e == up) continue;
-    max_num = max(max_num, dices[index][e]);
-  }
-
-  if (index == N) return max_num;
-
-  int up_val = dices[index][up];
-  e_dir next_bottom;
-  for (auto e : all_E) {
-    if (up_val == dices[index + 1][e]) {
-      next_bottom = e;
-      break ;
-    }
-  }
-  return solve(next_bottom, index + 1) + max_num; 
-}
-
 int main() {
+  int N;
   cin >> N;
 
-  for (int i = 1; i <= N; i++) {
-    cin >> dices[i][UP] >> dices[i][LEFT] >> dices[i][FRONT] \
-        >> dices[i][RIGHT] >> dices[i][BACK] >> dices[i][BOTTOM]; 
+
+  int sum[6] = {0, };
+  int up[6] = {1, 2, 3, 4, 5, 6};
+
+  //up-a left-b front-c right-d back-e down-f
+  int a, b, c, d, e, f;
+  while (N--) {
+    cin >> a >> b >> c >> d >> e >> f;
+
+    for (int i = 0; i < 6; i++) {
+      if (up[i] == a) { sum[i] += max(max(b, c), max(d, e)); up[i] = f; }
+      else if (up[i] == b) { sum[i] += max(max(a, c), max(e, f)); up[i] = d; }
+      else if (up[i] == c) { sum[i] += max(max(a, b), max(d, f)); up[i] = e; }
+      else if (up[i] == d) { sum[i] += max(max(a, c), max(e, f)); up[i] = b; }
+      else if (up[i] == e) { sum[i] += max(max(a, b), max(d, f)); up[i] = c; }
+      else if (up[i] == f) { sum[i] += max(max(b, c), max(d, e)); up[i] = a; }
+    }
   }
 
   int max_sum = 0;
-  max_sum = max(max_sum, solve(UP, 1));
-  max_sum = max(max_sum, solve(LEFT, 1));
-  max_sum = max(max_sum, solve(FRONT, 1));
-  max_sum = max(max_sum, solve(RIGHT, 1));
-  max_sum = max(max_sum, solve(BACK, 1));
-  max_sum = max(max_sum, solve(BOTTOM, 1));
-
+  for (int i = 0; i < 6; i++) {
+    max_sum = max(max_sum, sum[i]);  
+  }
   cout << max_sum << endl;
-  
 }
