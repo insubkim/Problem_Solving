@@ -3,58 +3,54 @@
 #include <string>
 #include <cmath>
 #include <vector>
+#include <cstring>
 
 using namespace std;
 
 int N,K;
-vector<string> vocab;
+int vocab[51];
 int max_vocab;
+int alpha;
 
-char alpha[26];
-
-void solve(int selected, int cnt) {
-  if (K == cnt) {
-    int teached_vocab = 0;
+int solve(int depth, int idx) {
+  int teached_vocab = 0;
+  if (depth == K - 5) {
 
     for (int i = 0; i < N; i++) {
-      bool teached = true;
-      for (int j = 4; j < vocab[i].size() - 4; j++) {
-        char c = vocab[i][j];
-        if (alpha[c - 'a']) continue ;
-        teached = false;
-        break ;
-      }
-      if (teached) teached_vocab++;
+      if ((vocab[i] & alpha) == vocab[i]) teached_vocab++;  
     }
-
     max_vocab = max(max_vocab, teached_vocab);
-    return ;
+    return max_vocab;
   }
-  
-  for (int i = selected; i < 26; i++) {
-    if (alpha[i]) continue;
-    alpha[i] = 1;
-    solve(selected + 1, cnt + 1);
-    alpha[i] = 0;
+
+  for (int i = idx; i < 26; i++) {
+    if (alpha & (1 << i)) continue;
+    alpha |= 1 << i;
+    max_vocab = max(solve(depth + 1, idx + 1), teached_vocab);
+    alpha &= ~(1 << i);
   }
+  return max_vocab;
 }
 
 int main() {
   cin >> N >> K;
 
   for (int i = 0; i < N; i++) {
-    string in;
-    cin >> in;
-    vocab.push_back(in);
+    string str;
+    cin >> str;
+    vocab[i] = 0;
+    for (auto c : str) {
+      vocab[i] |= 1 << (c - 'a');
+    }
   }
-  
-  alpha['a' - 'a'] = 1;
-  alpha['n' - 'a'] = 1;
-  alpha['t' - 'a'] = 1;
-  alpha['i' - 'a'] = 1;
-  alpha['c' - 'a'] = 1;
 
-  if (K >= 5) solve(0, 5);
+  alpha |= 1 << ('a' - 'a');
+  alpha |= 1 << ('n' - 'a');
+  alpha |= 1 << ('t' - 'a');
+  alpha |= 1 << ('i' - 'a');
+  alpha |= 1 << ('c' - 'a');
+  
+  if (K < 5) solve(0, 0);
 
   cout << max_vocab << endl;
 

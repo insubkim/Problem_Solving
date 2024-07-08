@@ -9,7 +9,7 @@ int main() {
   while (N--) {
     string in;
     cin >> in;
-    if ((in.back() - '0') % 2) cout << "odd"   << endl;
-    else        cout << "even"  << endl;
+    if ((in.back() - '0') % 2)  cout << "odd" << endl;
+    else                        cout << "even"  << endl;
   }
 }
