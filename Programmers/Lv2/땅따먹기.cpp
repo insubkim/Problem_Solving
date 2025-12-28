@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
+#include <string.h>
 
 using namespace std;
 
@@ -21,20 +22,20 @@ int solution(vector<vector<int>> land)
     int dp[4] = {0,};
 
 
-    dp[0] = land[i][0];
-    dp[1] = land[i][1];
-    dp[2] = land[i][2];
-    dp[3] = land[i][3];
+    dp[0] = land[0][0];
+    dp[1] = land[0][1];
+    dp[2] = land[0][2];
+    dp[3] = land[0][3];
 
     for (int i = 1; i < land.size(); i++)
     {
         int dp_new[4];
-        memcpy(dp_new, dp, siezof(dp_new));
+        memcpy(dp_new, dp, sizeof(dp_new));
 
-        dp[0] = land[i][0] + max_three(dp[1], dp[2], dp[3]);
-        dp[1] = land[i][1] + max_three(dp[0], dp[2], dp[3]);
-        dp[2] = land[i][2] + max_three(dp[0], dp[1], dp[3]);
-        dp[3] = land[i][3] + max_three(dp[0], dp[1], dp[2]);
+        dp[0] = land[i][0] + max_three(dp_new[1], dp_new[2], dp_new[3]);
+        dp[1] = land[i][1] + max_three(dp_new[0], dp_new[2], dp_new[3]);
+        dp[2] = land[i][2] + max_three(dp_new[0], dp_new[1], dp_new[3]);
+        dp[3] = land[i][3] + max_three(dp_new[0], dp_new[1], dp_new[2]);
     }
 
     answer = max(max_three(dp[0], dp[1], dp[2]), dp[3]);
