@@ -1,115 +1,236 @@
-#include <iostream>
-#include <array>
-#include <algorithm>
-#include <vector>
-#include <cassert>
+#include <bits/stdc++.h>
 
 using namespace std;
 
-int m = -1;
-int width, height;
-int space;
+#define UP 1 // y : -1, x = 0
+#define RIGHT 2 // y = 0, x = 1
+#define DOWN 3 // y = 1, x = 0
+#define LEFT 4 // y = 0, x = -1
 
-void  paint_line(array<array<int, 8>, 8> map, int y, int x, int dir, int type) {
-  int dx[4] = {1, 0, -1, 0};
-  int dy[4] = {0, 1, 0, -1};
+int min_unseen_spot = 2147483647;
+int height;
+int width;
 
-  //01234 ->
-  for (int i = 0; i < height; i++) {
-    for (int j = 0; j < width; j++) {
-      map[y][x] = 100;
-      y += dy[dir];
-      x += dx[dir];
-    } 
-  }
-  dir = (dir + 2) % 4;
-  //134 <-
+void fill_line(int y, int x, int dir, int map[][8])
+{
+    int dirs[5][2] = {
+        {0, 0},
+        {-1, +0}, // UP
+        {+0, +1}, // RIGHT
+        {+1, +0}, // DOWN
+        {+0, -1} // LEFT
+    };
 
-  dir = (dir - 1) % 4;
-  //234 up
+    int dy = dirs[dir][0];
+    int dx = dirs[dir][1];
 
-  dir = (dir + 3) % 4;
-  //4 down
-
-  switch (dir)
-  {
-  case 4
-
-  case 3
-  case 2
-  case 1
-  case 0
-  
-  default:
-    break;
-  }
-
-}
-
-int get_space(array<array<int, 8>, 8> map, vector<array<int, 3> > cctv) {
-  for (int i = 0; i < cctv.size(); i++) {
-    int y = cctv[i][0];
-    int x = cctv[i][1];
-    int dir = cctv[i][2];
-
-    switch (map[y][x])
+    if (dx == 0)
     {
-    case 0 //í•œì¤„
-      paint_line(map, y, x, dir, 0);
-      break;
-    case 1 //ë‘ì¤„
-      paint_line(map, y, x, dir, 1);
-      break;
-    case 2 //ë‘ì¤„
-      paint_line(map, y, x, dir, 2);
-      break;
-    case 3 //ì„¸ì¤„
-      paint_line(map, y, x, dir, 3);
-      break;
-    case 4 //ë„¤ì¤„
-      paint_line(map, y, x, dir, 4);
-      break;
-    default:
-      assert(0);      
-      break;
+        for (int i = y; i < height && i >= 0; i += dy)
+        {
+            if (map[i][x] == 0)
+                map[i][x] = '#';
+            if (map[i][x] == 6)
+                return ;
+        }
     }
-  }
-  int space = 0;
-  for (int i = 0; i < height; i++) {
-    for (int j = 0; j < width; j++) {
-      if (map[i][j] == 0) space++;
-    } 
-  }
-  return space;
+    else
+    {
+        for (int i = x; i < width && i >= 0; i += dx)
+        {
+            if (map[y][i] == 0)
+                map[y][i] = '#';
+            if (map[y][i] == 6)
+                return ;
+        }
+    }
 }
 
-void  solve(array<array<int, 8>, 8>& map, vector<array<int, 3> > cctv, int cnt) {
-  if (cnt == cctv.size()) {
-    int tmp = get_space(map, cctv);
-    space = min(space, tmp);
-    return ;
-  }
-  for (int i = 0; i < 4; i++) {
-    solve(map, cctv, cnt + 1);
-    cctv[cnt][2]++;
-  }
+void    paint_one(array<int,3> cctv, int map[][8])
+{
+    int y = cctv[0];
+    int x = cctv[1];
+    int dir = cctv[2];
+
+    fill_line(y, x, dir, map);
 }
 
+void    paint_two(array<int,3> cctv, int map[][8])
+{
+    int y = cctv[0];
+    int x = cctv[1];
+    int dir = cctv[2];
 
-int main() {
-  array<array<int, 8>, 8> map;
-  vector<array<int, 3> > cctv;//y, x, dir
+    // dir 1, 3 Àº ¿À, ¿Þ
+    if (dir == UP || dir == DOWN)
+    {
+        fill_line(y, x, LEFT, map);
+        fill_line(y, x, RIGHT, map);
+    }
+    else
+    {
+        fill_line(y, x, UP, map);
+        fill_line(y, x, DOWN, map);
+    }
+}
 
-  cin >> width >> height;
-  for (int i = 0; i < height; i++) {
-    for (int j = 0; j < width; j++) {
-      cin >> map[i][j];
-      if (1 <= map[i][j] && map[i][j] <= 5) {
-        array<int, 3> coord = {i, j, 0};
-        cctv.push_back(coord);
-      }
-    } 
-  }
-  space = width * height;
-  solve(map, cctv, 0);
+void    paint_three(array<int,3> cctv, int map[][8])
+{
+    int y = cctv[0];
+    int x = cctv[1];
+    int dir = cctv[2];
+
+    // dir 1 Àº À§, ¿À
+    if (dir == UP)
+    {
+        fill_line(y, x, UP, map);
+        fill_line(y, x, RIGHT, map);
+    }// dir 2 Àº ¿À, ¾Æ·¡
+    else if (dir == LEFT)
+    {
+        fill_line(y, x, RIGHT, map);
+        fill_line(y, x, DOWN, map);
+    }// dir 3 Àº ¾Æ·¡, ¿Þ
+    else if (dir == DOWN)
+    {
+        fill_line(y, x, DOWN, map);
+        fill_line(y, x, LEFT, map);
+    }// dir 4 Àº ¿Þ, À§
+    else if (dir == RIGHT)
+    {
+        fill_line(y, x, LEFT, map);
+        fill_line(y, x, UP, map);
+    }
+}
+
+void    paint_four(array<int,3> cctv, int map[][8])
+{
+    int y = cctv[0];
+    int x = cctv[1];
+    int dir = cctv[2];
+
+    // dir 1 Àº À§, ¿À, ¿Þ
+    if (dir == UP)
+    {
+        fill_line(y, x, UP, map);
+        fill_line(y, x, RIGHT, map);
+        fill_line(y, x, LEFT, map);
+    }// dir 2 Àº À§, ¿À, ¾Æ·¡
+    else if (dir == LEFT)
+    {
+        fill_line(y, x, UP, map);
+        fill_line(y, x, RIGHT, map);
+        fill_line(y, x, DOWN, map);
+    }// dir 3 Àº ¿À, ¾Æ·¡, À©
+    else if (dir == DOWN)
+    {
+        fill_line(y, x, RIGHT, map);
+        fill_line(y, x, DOWN, map);
+        fill_line(y, x, LEFT, map);
+    }// dir 4 Àº ¾Æ·¡, ¿Þ, À§
+    else if (dir == RIGHT)
+    {
+        fill_line(y, x, DOWN, map);
+        fill_line(y, x, LEFT, map);
+        fill_line(y, x, UP, map);
+    }
+}
+
+void    paint_five(array<int,3> cctv, int map[][8])
+{
+    int y = cctv[0];
+    int x = cctv[1];
+    int dir = cctv[2];
+
+    fill_line(y, x, UP, map);
+    fill_line(y, x, RIGHT, map);
+    fill_line(y, x, DOWN, map);
+    fill_line(y, x, LEFT, map);
+}
+
+int get_unseen_spot(int map[8][8], vector<array<int,3>> &cctv)
+{
+    int map_new[8][8] = {0,};
+
+    memcpy(map_new, map, sizeof(map_new));
+
+    for (auto &c: cctv)
+    {
+        int y = c[0];
+        int x = c[1];
+
+        // 1 À§ 
+        if (map_new[y][x] == 1) paint_one(c, map_new);
+        // 2 ¿À¸¥, ¿Þ 
+        if (map_new[y][x] == 2) paint_two(c, map_new);
+        // 3 À§, ¿À¸¥
+        if (map_new[y][x] == 3) paint_three(c, map_new);
+        // 4 À§ ¿À¸¥ ¿Þ
+        if (map_new[y][x] == 4) paint_four(c, map_new);
+        // 5 ¸ðµç ÂÊ
+        if (map_new[y][x] == 5) paint_five(c, map_new);
+    }
+
+    int unseen_spot = 0;
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            if (map_new[i][j] == 0)
+                unseen_spot++;
+        }
+    }
+    return unseen_spot;
+}
+
+void    solve(int map[8][8], vector<array<int,3>> &cctv, int round)
+{
+    if (round == cctv.size())
+    {
+        // »ç°¢Áö´ë °è»ê
+        int unseen_stot = get_unseen_spot(map, cctv);
+        min_unseen_spot = min(unseen_stot, min_unseen_spot);
+        return ;
+    }
+
+    // CCTV È¸Àü
+    // UP, RIGHT, DOWN, LEFT  
+    for (int i = UP; i <= UP + 3; i++)
+    {
+        cctv[round][2] = i;
+        solve(map, cctv, round + 1);
+    }
+}
+
+int main()
+{
+    // ¿ÏÀü Å½»ö
+    // cctvÀÇ ¹æÇâÀ» ¸ðµÎ ÇÑ¹ø½Ä ÀüºÎ µ¹¸°µÚ ÃÖ¼Ò°ª ÆÇ´Ü.
+
+    int N, M;
+    cin >> N >> M;
+    height = N;
+    width = M;
+
+    int map[8][8] = {0,};
+
+    // y, x, ¹æÇâ ÀúÀå
+    vector<array<int,3>> cctv;
+    for(int i = 0; i < N; i++)
+    {
+        for(int j = 0; j < M; j++)
+        {
+            cin >> map[i][j];
+            if (1 <= map[i][j] && map[i][j] <= 5)
+            {
+                array<int, 3> c = {i, j, UP};
+                cctv.push_back(c); 
+            }
+        }
+    }
+
+    solve(map, cctv, 0);
+
+    cout << min_unseen_spot << endl;
+
 }
