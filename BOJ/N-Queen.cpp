@@ -6,6 +6,15 @@ int N;
 int maps[16][16];
 int total_cnt;
 
+bool    OOB(int y, int x)
+{
+    if (y < 0 || x < 0)
+        return false;
+    if (y >= N || x >= N)
+        return false;
+    return true;
+}
+
 bool    checkmate(int y, int x)
 {
     // 가로 세로 체크
@@ -19,65 +28,25 @@ bool    checkmate(int y, int x)
             return false;   
     }
 
-    // 오른쪽 아래 대각 체크
-    int dy = 1;
-    int dx = 1;
-    for (int i = 0; i < N; i++)
+    //         아래 오른쪽, 아래 왼쪽, 위 오른쪽, 위 왼쪽
+    int dy[4] {+1      , +1     , -1     , -1};
+    int dx[4] {+1      , -1     , +1     , -1};
+
+    // 각 대각선 체크
+    for (int i = 0; i < 4; i++)
     {
-        if (y + dy >= N || x + dx >= N)
+        int ddy = dy[i];
+        int ddx = dx[i];
+
+        while (OOB(y + ddy, x + ddx))
         {
-            break;
+            if (maps[y + ddy][x + ddx])
+                return false;
+            ddy += dy[i];
+            ddx += dx[i];
         }
-        if (maps[y + dy][x + dx])
-            return false; 
-        dy++;
-        dx++;
     }
 
-    // 오른쪽 위 대각 체크
-    dy = -1;
-    dx = 1;
-    for (int i = 0; i < N; i++)
-    {
-        if (y + dy < 0 || x + dx >= N)
-        {
-            break;
-        }
-        if (maps[y + dy][x + dx])
-            return false; 
-        dy--;
-        dx++;
-    }
-
-    // 왼쪽 아래 대각 체크
-    dy = 1;
-    dx = -1;
-    for (int i = 0; i < N; i++)
-    {
-        if (y + dy >= N || x + dx < 0)
-        {
-            break;
-        }
-        if (maps[y + dy][x + dx])
-            return false;
-        dy++;
-        dx--;
-    }
-
-    // 왼쪽 위 대각 체크
-    dy = -1;
-    dx = -1;
-    for (int i = 0; i < N; i++)
-    {
-        if (y + dy < 0 || x + dx < 0)
-        {
-            break;
-        }
-        if (maps[y + dy][x + dx])
-            return false;
-        dy--;
-        dx--;
-    }
 
     return true;
 }
