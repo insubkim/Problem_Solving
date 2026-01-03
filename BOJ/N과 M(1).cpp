@@ -32,12 +32,12 @@ void    solve(int round)
 int main()
 {
     cin >> N >> M;
-    // for (int i = 1; i <= 8; i++)
-    // {
-    //     for (int j = 1; j <= i; j++)
-    //     {
-    //         N = i; M = j;    
+    for (int i = 1; i <= 8; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            N = i; M = j;    
             solve(0);
-    //     }   
-    // }
+        }   
+    }
 }
