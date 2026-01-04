@@ -17,46 +17,58 @@ bool    OOB(int y, int x)
     return false;
 }
 
-
 void    bfs(void)
 {
-    int visited[1001][1001] = {0,};
+    int visited[1001][1001][2] = {0,};
 
-    // y, x, 방문한 칸 수
-    queue<array<int,3>> visit_list; 
+    // y, x, 방문한 칸 수, 벽 부셨는지
+    queue<array<int,4>> visit_list; 
 
-    visit_list.push({0,0,1});
-    visited[0][0] = 1;
+    visit_list.push({0,0,1,0});
+    visited[0][0][0] = 1;
+    if (0 == N && 0 == M)
+        min_path = 1;
 
     while (visit_list.empty() == false)
     {
-        array<int,3> cur_node;
+        array<int,4> cur_node;
         cur_node[0] = visit_list.front()[0];
         cur_node[1] = visit_list.front()[1];
         cur_node[2] = visit_list.front()[2];
+        cur_node[3] = visit_list.front()[3];
         visit_list.pop();
+
+        // 목적지 도착
+        if (cur_node[0] == N - 1 && cur_node[1] == M - 1)
+        {
+            min_path = min(min_path, cur_node[2]);
+            return;
+        }
 
         for (int i = 0; i < 4; i++)
         {
             int y = cur_node[0] + dy[i];
             int x = cur_node[1] + dx[i];
             int visit_cnt = cur_node[2] + 1;
+            int break_wall = cur_node[3];
 
             if (OOB(y,x)) continue;
 
-            if (visited[y][x]) continue;
-            
-            if (maps[y][x] == 1) continue;
 
-            // 목적지 도착
-            if (y == N - 1 && x == M - 1)
+            // break_wall 상태에서 오지 않았고 벽이 아니라면
+            if (maps[y][x] == 0 && visited[y][x][break_wall] == 0)
             {
-                min_path = min(min_path, visit_cnt);
-                return;
+                visit_list.push({y, x, visit_cnt, break_wall});
+                visited[y][x][break_wall] = 1;
+            }
+            // 벽인데 이전에 벽 부순적이 없고 벽 부수지 않은 상태에서 온적 없음.
+            if (maps[y][x] == 1 && break_wall == 0 && visited[y][x][1] == 0)
+            {
+                break_wall = 1;
+                visited[y][x][break_wall] = 1;
+                visit_list.push({y, x, visit_cnt, break_wall});
             }
 
-            visit_list.push({y,x,visit_cnt});
-            visited[y][x] = 1;
         }
     }
 }
@@ -64,6 +76,7 @@ void    bfs(void)
 int main()
 {
     cin >> N >> M;
+
     for (int i = 0; i < N; i++)
     {
         string s;
@@ -72,19 +85,6 @@ int main()
         {
             
             maps[i][j] = s[j] - '0';
-        }
-    }
-
-    for (int i = 0; i < N; i++)
-    {
-        for (int j = 0; j < M; j++)
-        {
-            if (maps[i][j] == 1)
-            {
-                maps[i][j] = 0;
-                bfs();
-                maps[i][j] = 1;
-            }
         }
     }
 
