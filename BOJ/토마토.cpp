@@ -41,9 +41,7 @@ void    bfs(void)
 
             if (OOB(yy, xx)) continue;
 
-            if (maps[yy][xx] == 1) continue;
-            
-            if (maps[yy][xx] == -1) continue;
+            if (maps[yy][xx] != 0) continue;
 
             maps[yy][xx] = 1;
             visit_list.push({yy, xx, date + 1});
@@ -53,6 +51,9 @@ void    bfs(void)
 
 int main()
 {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    
     cin >> M >> N;
 
     for (int i = 0; i < N; i++)
