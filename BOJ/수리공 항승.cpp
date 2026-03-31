@@ -1,31 +1,40 @@
 #include <iostream>
+#include <vector>
 #include <algorithm>
-#include <cassert>
 
 using namespace std;
 
 int main() {
-  int pipe[1001] = {0, };
+  // 파이프 상태. 새면 상태 1 
+  vector<int> pipe;
+
+  // 새는 곳 갯수, 테이프 길이
   int N,L;
   cin >> N >> L;
 
   for (int i = 1; i <= N; i++) {
     int tmp;
     cin >> tmp;
-    pipe[tmp] = 1;
+    pipe.push_back(tmp);
   }
 
-  int tape = 0;
-  for (int i = 1; i <= 1000; i++) {
-    int tmp_L = L;
-    int j = i;
-    while (tmp_L && j <= 1000 && pipe[j]) {
-      if (tmp_L == L) tape++;
-      pipe[j++] = 0;
-      tmp_L--;
-    }
+  sort(pipe.begin(), pipe.end());
+  
+
+  int tape_cnt = 0;
+  int last_taped = 0;
+
+  // 새는 곳 확인
+  for (auto &x: pipe) {
+    // 테이프 감겼는지 확인    
+    if (x <= last_taped) 
+      continue;
+    // 테이프 감기  
+    last_taped = x + L - 1;
+    tape_cnt++;
   }
-  cout << tape << endl;
 
+  cout << tape_cnt << endl;
 
+  return 0;
 }
