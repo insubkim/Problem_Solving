@@ -1,5 +1,7 @@
 #include <iostream>
 #include <queue>
+#include <string>
+#include <tuple>
 
 using namespace std;
 
@@ -58,10 +60,10 @@ int main() {
     cin >> n >> m;
 
     for (int i = 1; i <= n; i++) {
+        string s;
+        cin >> s;
         for (int j = 1; j <= m; j++) {
-            int c;
-            cin >> c;
-            map[i][j] = c;
+            map[i][j] = s[j - 1] - '0';
         }   
     }
     
