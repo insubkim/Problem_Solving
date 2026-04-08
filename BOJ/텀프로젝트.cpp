@@ -1,70 +1,45 @@
 #include <iostream>
-#include <vector>
-#include <iterator>
-
-#include <string.h>
+#include <queue>
 
 using namespace std;
 
-// 사람 수
 int n;
-
-// 각 학생이 선택한 팀원
 int student_select[100001];
-// 팀 소속 여부
-int student_team[100001];
+int indegree[100001];
 
-int solve(void) {
-    // 각 선수 팀에 소속되어 있는지 확인
-    // 소속 안되어있으면 소속 시도.
-    // 마지막 선택된 학생이 처음 선택한 학생 골랐는지 확인
-    memset(student_team, 0, sizeof(student_team));
+int solve() {
+    // indegree 초기화
     for (int i = 1; i <= n; i++) {
-        if (student_team[i]) {
-            continue ;
-        }
+        indegree[i] = 0;
+    }
 
-        vector<int> team;
-        team.push_back(i);
-        int visited[100001] = {0,};
+    // 각 노드의 진입차수 계산
+    for (int i = 1; i <= n; i++) {
+        indegree[student_select[i]]++;
+    }
 
-        while (true) {
-            int last = team.back();
-            int last_select = student_select[last];
+    queue<int> q;
 
-            if (visited[last]) {
-                // 뒤에서 부터 last 찾을떄까지 반복
-                vector<int>::iterator it = team.end();
-                
-                while (true) {
-                    --it;
-                    student_team[*it] = true;
-                    if (last == student_select[*it]) {
-                        break ; 
-                    }
-                    if (it == team.begin()) {
-                        break ;
-                    }
-                }
-                break ;
-            }
-            
-            if (last_select == team[0]) {
-                for (auto &x: team) {
-                    student_team[x] = true;
-                }
-                break ;
-            }
-
-            team.push_back(last_select);
-            visited[last] = true;
+    // indegree 0인 학생들은 팀이 될 수 없음
+    for (int i = 1; i <= n; i++) {
+        if (indegree[i] == 0) {
+            q.push(i);
         }
     }
 
     int no_team = 0;
-    for (int i = 1; i <= n; i++) {
-        if (!student_team[i]) {
-            no_team++;
+
+    while (!q.empty()) {
+        int cur = q.front();
+        q.pop();
+
+        no_team++;
+
+        int next = student_select[cur];
+        indegree[next]--;
+
+        if (indegree[next] == 0) {
+            q.push(next);
         }
     }
 
@@ -72,19 +47,21 @@ int solve(void) {
 }
 
 int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
     int T;
     cin >> T;
 
     while (T--) {
         cin >> n;
+
         for (int i = 1; i <= n; i++) {
             cin >> student_select[i];
         }
-        int no_team;
-        no_team = solve();
-        
-        cout << no_team << endl;
+
+        cout << solve() << '\n';
     }
-    
+
     return 0;
 }
