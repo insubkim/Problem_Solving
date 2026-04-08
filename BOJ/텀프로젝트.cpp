@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <iterator>
 
 #include <string.h>
 
@@ -32,6 +33,19 @@ int solve(void) {
             int last_select = student_select[last];
 
             if (visited[last]) {
+                // 뒤에서 부터 last 찾을떄까지 반복
+                vector<int>::iterator it = team.end();
+                
+                while (true) {
+                    --it;
+                    student_team[*it] = true;
+                    if (last == student_select[*it]) {
+                        break ; 
+                    }
+                    if (it == team.begin()) {
+                        break ;
+                    }
+                }
                 break ;
             }
             
