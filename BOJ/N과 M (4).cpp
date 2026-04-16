@@ -2,24 +2,27 @@
 
 using namespace std;
 
+// 1 ~ N 까지의 수 중 M 개 선택
 int N, M;
 
-void    solve(int s, int idx, int selected[]) {
-    // if round == M
-    // return ;
-    if (idx == M){
-        for (int i = 0; i < M; i++)
-            cout << selected[i] << ' ';
+// 수열 결과
+int selected[10] = {0,};
+
+void    solve(int start, int round) {
+    if (round == M){
+        for (int i = 1; i <= M; i++) {
+            cout << selected[i];
+            if (i != M) {
+                cout << ' ';
+            }
+        }
         cout << endl;
         return ;
-    } else if (idx > M)
-        return ;
+    }
 
-    selected[idx] = s;
-
-    // recurse
-    for (int i = s + 1; i <= N; i++){
-        solve(i, idx + 1, selected);
+    for (int i = start; i <= N; i++){
+        selected[round + 1] = i; 
+        solve(i, round + 1);
     }
 }
 
@@ -27,8 +30,8 @@ int main() {
     cin >> N >> M;
 
     for (int i = 1; i <= N; i++) {
-        int selected[10] = {0,};
-        solve(i, 0, selected);
+        selected[1] = i;
+        solve(i, 1);
     }
 
     return 0;
