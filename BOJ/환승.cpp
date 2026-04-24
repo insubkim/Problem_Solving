@@ -12,6 +12,7 @@ vector<int> edge[100001];
 vector<int> hypertube[1001];
 
 int visited[100001];
+int visited_hypertube[1001];
 
 int bfs(void) {
     queue<pair<int, int>> q;
@@ -28,6 +29,11 @@ int bfs(void) {
         }
 
         for (auto &h: edge[cur]) {
+            if (visited_hypertube[h]) {
+                continue ;
+            }
+            visited_hypertube[h] = 1;
+
             for (auto x: hypertube[h]){
                 if (visited[x]) {
                     continue ;
