@@ -1,9 +1,9 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"os"
-	"bufio"
 )
 
 func main() {
@@ -14,7 +14,7 @@ func main() {
 	var weigh int
 	fmt.Fscan(r, &weigh)
 
-	if weigh % 2 != 0 || weigh == 2 {
+	if weigh%2 != 0 || weigh == 2 {
 		fmt.Fprintf(w, "NO\n")
 	} else {
 		fmt.Fprintf(w, "YES\n")
