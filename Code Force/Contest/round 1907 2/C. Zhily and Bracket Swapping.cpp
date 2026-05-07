@@ -26,63 +26,46 @@ int main() {
         a.insert(a.begin(), ' ');
         b.insert(b.begin(), ' ');
 
-        int total_open = 0;
-        for (int i = 1; i <= n; i++) {
-            if (a[i] == '(') total_open++;
-            if (b[i] == '(') total_open++;
-        }
+        int low = 0;
+        int high = 0;
+        bool    suc = true;
 
-        if (total_open != n) {
-            cout << "NO" << '\n';
-            continue;
-        }
-        
-        int a_need_open = n/2;
-        int b_need_open = n/2;
-        int a_bal = 0;
-        int b_bal = 0;
-
-        bool suc = true;
         for (int i = 1; i <= n; i++) {
             char aa = a[i];
             char bb = b[i];
 
             if (aa == '(' && bb == '(') 
             {
-                a_need_open--;
-                b_need_open--;
-                a_bal++;
-                b_bal++;
-            } else if (aa == ')' && bb == ')') {
-                a_bal--;
-                b_bal--;
-            } else {
-                if (a_need_open > 0 && a_bal + 1 >= 0) {
-                    a_bal++;
-                    b_bal--;
-                    a_need_open--;
-                } else {
-                   b_bal++;
-                   a_bal--;
-                   b_need_open--; 
+                high++;
+                low++;
+            } else if (aa == ')' && bb == ')') { 
+                high--;
+                low--;
+            } else { 
+                if (high < 1) {
+                    suc = false;
+                    break ;
                 }
+
+                high--;
+                low++;
+                
+                int h = high;
+                int l = low;
+
+                high = max(l, h);
+                low = min(l, h);
             }
-            if (a_bal < 0 || b_bal < 0) {
+
+            if (low < 0 || high < 0) {
                 suc = false;
-                break;
-            }
-            int remain = n - i;
-            if (a_bal > remain || b_bal > remain) {
-                suc = false;
-                break;    
+                break ;
             }
         }
-        // cout << a_open << ' ' << a_close << ' ' << b_open << ' ' << b_close << '\n';
-        if (suc && a_bal == 0 && b_bal == 0 && a_need_open == 0 && b_need_open == 0) {
+        if (suc && low == 0 && high == 0) {
             cout << "YES" << '\n';
         } else {
             cout << "NO" << '\n';
         }
-
     }
 }
