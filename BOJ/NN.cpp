@@ -1,28 +1,33 @@
-#include <bits/stdc++.h>
-
-#define REP(i, a, b) for (int i = a; i <= b; i++)
+#include <iostream>
+#include <string>
 
 using namespace std;
 
-int main(){
+int main(void) {
+	int N, M, NLength;
+	string out;
+	string NToString;
 
-    int N,M,tmp;
-    int n_len = 1;
-    cin >> N >> M;
-    tmp = N;
-    while (tmp >= 10){
-        tmp = tmp / 10;
-        n_len++;
-    }
-    if (n_len > M){
-        REP(i, 1, M){
-            cout << N;
-        }
-    }else{
-        REP(i, 1, N){
-            cout << N;
-        }
-    }
-    cout << endl;
-    return (0);
+	cin >> N >> M;
+
+	NToString = to_string(N);
+	NLength = NToString.length();
+
+	if (NLength * N > M) {
+		for (int i = 0; i < M / NLength; i++) {
+			out += NToString;
+		}
+
+		// NToString[M % NLength] = 0; << something very idiot
+		NToString = NToString.substr(0, M % NLength);
+	 
+		out += NToString;
+	} else {
+		for (int i = 0; i < N; i++) {
+			out += NToString;
+		}
+	}
+
+	cout << out << endl;
+	return 0;
 }
