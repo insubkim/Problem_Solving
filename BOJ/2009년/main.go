@@ -60,28 +60,37 @@ func main() {
 		curWeekDay %= 7
 		//fmt.Fprintf(w, "%d-%d\n", curMonth, curDay)
 		if curDay > 31 &&
-		   (targetMonth == 1  ||
-		    targetMonth == 3  ||
-		    targetMonth == 5  ||
-		    targetMonth == 7  ||
-		    targetMonth == 8  ||
-		    targetMonth == 10 ||
-		    targetMonth == 12) {
+		   (curMonth == 1  ||
+		    curMonth == 3  ||
+		    curMonth == 5  ||
+		    curMonth == 7  ||
+		    curMonth == 8  ||
+		    curMonth == 10 ||
+		    curMonth == 12) {
+			//fmt.Fprintf(w, "31 month change %d-%d\n", curMonth, curDay)
 			curDay = 1
 			curMonth++
 		} else if curDay > 30 && 
-			      (targetMonth == 4 ||
-			       targetMonth == 6 ||
-			       targetMonth == 9 ||
-			       targetMonth == 11) {
+			      (curMonth == 4 ||
+			       curMonth == 6 ||
+			       curMonth == 9 ||
+			       curMonth == 11) {
+			//fmt.Fprintf(w, "30 month change %d-%d\n", curMonth, curDay)
 			curDay = 1
 			curMonth++
-		} else if curDay > 28 && targetMonth == 2 {
+		} else if curDay > 28 && curMonth == 2 {
+			//fmt.Fprintf(w, "28 month change %d-%d\n", curMonth, curDay)
+			curDay = 1
 			curDay = 1
 			curMonth++
 		}
+
+		if (curMonth > 12 || curDay > 31) {
+			fmt.Fprintf(w, "something very wrong %d-%d\n", curMonth, curDay)	
+			os.Exit(2)
+		}
 	}
-//	fmt.Fprintf(w, "%d-%d\n", curMonth, curDay)
+	//fmt.Fprintf(w, "%d-%d\n", curMonth, curDay)
 
 	fmt.Fprintf(w, "%s\n", dayOfWeek[curWeekDay]);
 }
