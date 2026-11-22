@@ -11,9 +11,10 @@ func main() {
 	defer w.Flush()
 
 	{
-		var s MyDeque
+		var s *MyDeque
 		var t int
-		
+	
+		s = NewDeque()
 		fmt.Fscanf(r, "%d", &t)
 
 		for t > 0 {
@@ -81,8 +82,10 @@ func main() {
 				} else {
 					fmt.Fprintf(w, "-1\n")
 				}
+			default:
+				assert(false)
 			}
-			s.Peek()
+			// s.Peek()
 		}
 	}
 }
@@ -90,144 +93,103 @@ func main() {
 type MyDeque struct {
 	deque    []interface{}
 	front    int // front indicates first value index
-	back     int // back indicates next index to be inserted on back, 
-	             // the main reason to separate front, back concept is to distinguish whether deque is empty
-				 // if front, back indicates the actual position of value, 
-				 // on empty state of deque, we need flag for empty state. check ex1, ex2
-				 // ex1) | - | - | - |
-				 //       F,B       F == B 
-				 // ex2) | 1 | - | - |
-				 //       F,B       F == B 
-
+	// back     int // back is not neccesarry since, back = (front + size) % capacity
+	// | 6 | - | - | - | - | 3 | 4 | 5 |
+	//                        F
+	// B = ( 5 + 4 ) % 8; // 1
 	capacity int
 	size     int
 }
 
-func New() *MyDeque {
+const initialDequeSize = 256
+
+func NewDeque() *MyDeque {
 	var s MyDeque
-	var size int
 
-	size = 256
-
-	s.deque = make([]interface{}, size)
-	s.capacity = size
-
+	s.deque = make([]interface{}, initialDequeSize)
+	s.capacity = len(s.deque)
+		
 	return &s
 }
 
 func (s *MyDeque)expand() {
 	var d []interface{}
+	var n int
 
-	d = make([]interface{}, len(s.deque) * 2)
+	d = make([]interface{}, s.capacity * 2)
 
-	if s.front < s.back {
-		copy(d, s.deque)
-	} else {
-		d = append(d, s.deque[s.front:])
-		d = append(d, s.deque[:s.back + 1])
-		s.front = 0
-		s.back = s.size - 1
-		// when deque is empty
-		if s.back < 0 { s.back = 1 }
+	n = copy(d, s.deque[s.front:])
+
+	if s.front + s.size > s.capacity {
+		copy(d[n:], s.deque[:s.size - n])	
 	}
+
+	s.front = 0
 
 	s.deque = d
 	s.capacity = len(s.deque)
 }
 
 func (s *MyDeque)PushFront(v interface{}) {
-	if s.size + 1 == s.capacity { s.expand() }
+	if s.size == s.capacity { s.expand() }
 
-	if s.front == s.back {
-		s.back++
-	} else if s.front == 0 {
-		s.front = s.capacity - 1
-	} else {
-		s.front--
-	}
-
-	if s.front == s.back {
-		fmt.Printf("something is very wrong deque front == back on inserting\n")
-		os.Exit(12)
-	}
-
+	s.front = (s.front - 1 + s.capacity) % s.capacity
 	s.deque[s.front] = v
 
 	s.size++	
 }
 
 func (s *MyDeque)PushBack(v interface{}) {
-	if s.size + 1 == s.capacity { s.expand() }
+	if s.size == s.capacity { s.expand() }
 	
-	if s.back == s.capacity - 1 {
-		s.back = 0
-	} else {
-		s.back++
-	}
-
-	if s.front == s.back {
-		fmt.Printf("something is very wrong deque front == back on inserting\n")
-		os.Exit(12)
-	}
-
-	s.deque[s.back] = v
+	s.deque[(s.front + s.size) % s.capacity] = v
+	
 	s.size++	
 }
 
 func (s *MyDeque)PopFront() interface{}{
-	var l int
 	var v interface{}
 
-	l = len(s.deque)
-
-	if (l == 0) { return nil }
+	if s.size == 0 { return nil }
 
 	v = s.Front()
-	s.deque = s.deque[:l - 1]
+	s.deque[s.front] = nil
+	s.front = (s.front + 1) % s.capacity
+	s.size--
 
 	return v
 }
 
 func (s *MyDeque)PopBack() interface{}{
-	var l int
 	var v interface{}
 
-	l = len(s.deque)
+	if (s.size == 0) { return nil }
 
-	if (l == 0) { return nil }
-
-	v = s.Front()
-	s.deque = s.deque[:l - 1]
+	v = s.Back()
+	s.deque[(s.front + s.size - 1) % s.capacity] = nil
+	s.size--
 
 	return v
 }
 
 func (s *MyDeque)Empty() bool {
-	return len(s.deque) == 0
+	return s.size == 0
 }
 
 func (s *MyDeque)Front() interface{} {
-	var l int
+	if s.size == 0 { return nil }
 
-	l = len(s.deque)
-
-	if (l == 0) { return nil }
-
-	return s.deque[l - 1]
+	return s.deque[s.front]
 }
 
 func (s *MyDeque)Back() interface{} {
-	var l int
+	if s.size == 0 { return nil }
 
-	l = len(s.deque)
-
-	if (l == 0) { return nil }
-
-	return s.deque[l - 1]
+	return s.deque[(s.front + s.size - 1) % s.capacity]
 }
 
 func (s *MyDeque)Size() int {
-	return len(s.deque)
+	return s.size
 }
 
 func (s *MyDeque)Peek() {
@@ -237,9 +199,11 @@ func (s *MyDeque)Peek() {
 	for i = 0; i < s.capacity; i++ {
 		fmt.Printf("queue location [%d] [%v]", i, s.deque[i])
 		if i == s.front { fmt.Printf(" << Front") }
-		if i == s.back { fmt.Printf(" << Back ") }
+		if i == (s.front + s.size) % s.capacity { fmt.Printf(" << Back ") }
 		fmt.Printf("\n")
 	}
 }
 
-
+func assert(c bool) {
+	if !c { panic("FAIL") }
+}
