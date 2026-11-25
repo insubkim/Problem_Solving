@@ -3,7 +3,6 @@ package main
 import "bufio"
 import "fmt"
 import "os"
-import "sort"
 
 func main() {
 	r := bufio.NewReader(os.Stdin)
@@ -11,12 +10,11 @@ func main() {
 	defer w.Flush()
 
 	var n int
-	var rank [51]int
 
 	type wh struct {
-		i int
 		w int
 		h int
+		rank int
 	}
 	var whs []wh
 
@@ -26,24 +24,24 @@ func main() {
 		var h int
 		var wh wh
 		fmt.Fscan(r, &w, &h)
-		wh.i = i
 		wh.w = w
 		wh.h = h
+		wh.rank = -1
 		whs = append(whs, wh)
 	}
 
-	// 정렬
-	sort.Slice(whs, func(i, j int) bool {
-		if whs[i].w > whs[j].w && whs[i].h > whs[j].h {
-			return true
+	for i := 0; i < n; i++ {
+		var rank int
+		
+		rank = 1
+		for j := 0; j < n; j++ {
+			if whs[j].w > whs[i].w && whs[j].h > whs[i].h {
+				rank++
+			}
 		}
-		return false
-	})
-
-	// rank 저장
-
-
-
-	// rank 출력
+		fmt.Fprintf(w, "%d ", rank)
+	}
+	fmt.Fprintf(w, "\n")
 
 }
+
